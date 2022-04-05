@@ -19,7 +19,7 @@ Install
 
 ## Spec
 
-https://docs.google.com/spreadsheets/d/1iWfwf7XSZQzgHwn_H1lRFpJf1Zc-yxpb1dxVcMuXsuk/edit#gid=0
+https://docs.google.com/spreadsheets/d/1iWfwf7XSZQzgHwn_H1lRFpJf1Zc-yxpb1dxVcMuXsuk/edit#gid=1139616886
 
 ## Convention (https://github.com/kyhuuhai/training_shop/blob/master/CONVENTION.md)
 
