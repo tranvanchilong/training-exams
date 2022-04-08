@@ -12,7 +12,6 @@ gem "jbuilder"
 gem "slim-rails"
 gem "will_paginate"
 gem "will_paginate-bootstrap4"
-gem "bootstrap", "~> 4.5.0"
 gem "execjs"
 gem "font-awesome-rails", "~> 4.7", ">= 4.7.0.5"
 gem "jquery-rails"
@@ -22,6 +21,10 @@ gem "puma", "~> 5.0"
 gem "webpacker", "~> 5.0"
 gem "turbolinks"
 gem "jbuilder"
+gem "sprockets-rails"
+gem "bootstrap-sass"
+gem "rails-i18n"
+gem "bootstrap-sass"
 
 
 group :development, :test do
@@ -29,7 +32,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "web-console", "~> 3.7.0"
+  gem "web-console"
 
   gem "spring"
 end
