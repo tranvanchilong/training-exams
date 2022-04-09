@@ -1,5 +1,8 @@
 en:
   exam_online: Exam Online
+  controller:
+    user:
+      flash_success: "Welcome to the Exam onlie"
   layouts:
     footer:
       english: English
@@ -14,3 +17,17 @@ en:
       header: Welcom to Exam Online
       content: Expand on your experience of coding with FREE Top-Quality Exams
       signup: Sign up
+  users:
+    new:
+      title: "Sign Up"
+      h1_html: "Sign up"
+      para_html: "This will be a signup page for new users."
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      confirmation: "Confirmation"
+      btn_submit: "Create my account"
+  shared:
+    error:
+      title: "The form contains"
+      error: "error"

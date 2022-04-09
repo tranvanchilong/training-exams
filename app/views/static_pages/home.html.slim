@@ -1,4 +1,5 @@
 div class="center jumbotron home"
   h1 = t ".header"
   h2 = t ".content"
-  =link_to t(".signup"), "#", class: "btn btn-lg btn-primary"
+  = link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary"
+= render "static_pages/list_exam"
