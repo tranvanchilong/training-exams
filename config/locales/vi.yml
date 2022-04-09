@@ -1,5 +1,8 @@
 vi:
   exam_online: Exam Online
+  controller:
+    user:
+      flash_success: "Chào mừng đến với Exam Online!"
   layouts:
     footer:
       english: English
@@ -15,3 +18,17 @@ vi:
       content: Phát triển kỹ năng lập trình của bạn bằng những bài kiểm tra
         miễn phí và chất lượng
       signup: Hãy đăng ký
+  users:
+    new:
+      title: "Đăng Ký"
+      h1_html: "Đăng Ký"
+      para_html: "Đây sẽ là trang đăng ký cho người dùng mới."
+      name: "Họ Tên"
+      email: "Địa Chỉ Mail"
+      password: "Mật Khẩu"
+      confirmation: "Xác nhận lại mật khẩu"
+      btn_submit: "Đăng ký tài khoản"
+  shared:
+    error:
+      title: "Biểu mẫu chứa"
+      error: "lỗi"
