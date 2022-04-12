@@ -111,11 +111,20 @@ footer {
   background-size: 100% 100%;
   margin-left: 325px;
   margin-top: 52px;
+  height: 370px;
+}
+
+.slide-home {
+  position: relative;
+  top: -26px;
+  margin-top: 52px;
+  height: 370px;
+  width: 100%;
 }
 
 .image-footer {
   background-size: contain;
-  height: 300px;
+  height: 370px;
   width: 100%;
   border-radius: 6px;
 }
@@ -275,10 +284,10 @@ input {
 
 .img-fluid {
   position: absolute;
-  top: -350px;
-  left: 450px;
+  top: 52px;
+  left: 498px;
   height: 600px;
-  width: 500px;
+  width: 450px;
   border: 1px solid $gray-medium-light;
   border-radius: 6px;
   opacity: 0.5;
@@ -289,3 +298,13 @@ input {
 //   width: 75%;
 //   right: 0;
 // }
+
+.panel-default {
+  position: absolute;
+  top: 53px;
+  width: 100%;
+}
+
+#session_remember_me {
+  margin-left: -186px;
+}
