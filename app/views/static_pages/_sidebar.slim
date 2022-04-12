@@ -1,11 +1,13 @@
 .col-lg-3
-  h3.center.my-4 Danh Sach Bai Test
-  .list-group
-    a.list-group-item href="#"  Bai Test SQL
-    a.list-group-item href="#"  Bai Test Ruby
-    a.list-group-item href="#"  Bai Test Ruby On Rails
-    a.list-group-item href="#"  Bai Test Html css
-    a.list-group-item href="#"  Bai Test Javascript
-    a.list-group-item href="#"  Bai Test ReactJS
-    a.list-group-item href="#"  Bai Test Hoc May
-    a.list-group-item href="#"  Bai Test IOT
+  - if logged_in? && current_user.admin?
+    h2.my-4= t(".admin_title")
+    .list-group
+      = link_to t(".admin_func1"), "#", class: "list-group-item"
+      = link_to t(".admin_func2"), "#", class: "list-group-item"
+      = link_to t(".admin_func3"), "#", class: "list-group-item"
+      = link_to t(".admin_func4"), "#", class: "list-group-item"
+  - else
+    h2.my-4= t(".user_title")
+    .list-group
+      = link_to t(".user_func1"), "#", class: "list-group-item"
+      = link_to t(".user_func2"), "#", class: "list-group-item"
