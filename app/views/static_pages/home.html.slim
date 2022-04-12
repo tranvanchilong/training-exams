@@ -1,5 +1,10 @@
-div class="center jumbotron home"
-  h1 = t ".header"
-  h2 = t ".content"
-  = link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary"
-= render "static_pages/list_exam"
+- if logged_in?
+  div class = "slide-home"
+    = render "static_pages/category"
+  = render "static_pages/list_exam"
+- else
+  div class= "center jumbotron home"
+    h1 = t ".header"
+    h2 = t ".content"
+    = link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary"
+  = render "static_pages/list_exam"
