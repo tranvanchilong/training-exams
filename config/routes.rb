@@ -10,7 +10,6 @@ Rails.application.routes.draw do
     concern :imageable do
       resources :images, only: :create
     end
-
     resources :users, concerns: [:imageable]
     resources :users
     namespace :admin do
@@ -30,5 +29,7 @@ Rails.application.routes.draw do
       end
     end
     resources :password_resets
+    resources :account_activations,only:[:edit]
+    resources :password_resets,only:[:new,:create,:edit,:update]
   end
 end
