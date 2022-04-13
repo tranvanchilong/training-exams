@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'exams/new'
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
     get "/signup", to: "users#new"
@@ -12,11 +13,11 @@ Rails.application.routes.draw do
         resources :questions
       end
     end
-
-    resources :account_activations,only:[:edit]
-    resources :password_resets,only:[:new,:create,:edit,:update]
-
+    resources :achievements, only: [:index]
+    resources :account_activations, only:[:edit]
+    resources :password_resets, only:[:new,:create,:edit,:update]
   end
+<<<<<<< HEAD
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -72,4 +73,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+=======
+>>>>>>> profile
 end
