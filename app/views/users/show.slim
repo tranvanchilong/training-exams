@@ -25,12 +25,14 @@ section#about.section.about-section.gray-bg
                 p #{@user.address}
             .col-md-6
               .media
-                = link_to 'Update Information'                
+                = link_to 'Update Information', edit_user_path(id: current_user.id)             
               .media
-                = link_to "Update Avatar"                              
+                = link_to "Update Avatar"         
+                .media
+                = link_to "Achivement", achievements_path(user_id: current_user.id)                   
       .col-lg-6
         .about-avatar
-          = image_tag "anh1.png", width: 300 , height:300
+          = image_tag "anh1.png", width: 300, height:300
           
     
 
