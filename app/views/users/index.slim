@@ -1,15 +1,15 @@
-<% provide(:title, "Home") %>
-<!DOCTYPE html>
-<html>
-<head>
-<title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
-</head>
-<body>
-<h1>Sample App</h1>
-<p>
-This is the home page for the
-<a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-sample application.
-</p>
-</body>
-</html>
+h1 Listing users
+table
+  thead
+    tr
+      th Name
+      th Email
+      th colspan="3" 
+  - @users.each do |user|
+    tr
+      td= user.name
+      td= user.email
+      td= link_to 'Show', user
+      td= link_to 'Edit', edit_user_path(user)
+      td= link_to 'Destroy', user, method: :delete, \
+          data: { confirm: 'Are you sure?' }        \
