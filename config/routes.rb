@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'exams/new'
+  
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
     get "/signup", to: "users#new"
