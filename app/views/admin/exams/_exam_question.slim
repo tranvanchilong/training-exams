@@ -1,0 +1,5 @@
+.center.col-lg-12.view-question
+  .create-question id="question-form-#{@exam.id}"
+  ul.question-ul
+    - @questions.each do |question|
+      li= question.content
