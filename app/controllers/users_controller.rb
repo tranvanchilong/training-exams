@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_action :correct_user,only: [:edit, :show, :update]
+  before_action :correct_user,only: [:edit, :show, :update]
   def new
     @user = User.new
   end
@@ -24,8 +24,9 @@ before_action :correct_user,only: [:edit, :show, :update]
     params.require(:user).permit :name, :email, :password,
                                  :password_confirmation
   end
+  
   def logged_in_user
-    unless logged_in?
+    return if logged_in?
         store_location
         flash[:danger] = "Please log in."
         redirect_to login_url
