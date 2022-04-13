@@ -57,5 +57,9 @@ class User < ApplicationRecord
   def downcase_email
     self.email = email.downcase
   end
+<<<<<<< HEAD
 >>>>>>> SingUp
+=======
+  
+>>>>>>> update avatar
 end
