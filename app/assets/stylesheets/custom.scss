@@ -162,7 +162,6 @@ textarea {
 
 /* typography */
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -178,7 +177,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -443,4 +442,23 @@ input {
 
 #session_remember_me {
   margin-left: -186px;
+}
+
+.btn-exam {
+  margin: 0 6px;
+}
+
+.exam-show {
+  position: relative;
+  top: -274px;
+  width: 80%;
+  height: 25%;
+  .name-exam {
+    line-height: 50px;
+    font-size: 50px;
+  }
+  .btn-create-question {
+    position: relative;
+    top: 15px;
+  }
 }
