@@ -60,13 +60,18 @@ vi:
     new_user: "Người dùng mới?"
     signup: "Đăng ký"
     remember: "Ghi nhớ mật khẩu"
-    email: "địa chỉ email"
+    email: "Địa chỉ Email"
     password: "Mật Khẩu"
     or: "Hoặc"
     facebook: "Đăng nhập bằng Facebook"
-    google: "Đăng nhập bằng  Google"
+    google: "Đăng nhập bằng Google"
   flash:
     invalid: "Sai email hoặc mật khẩu"
+  password:
+    forgot: "Quên mật khẩu?"
+    submit-email: "Xác nhận Email"
+    title: "Quên mật khẩu"
+    enter: "Nhập địa chỉ Email"
   admin:
     exams:
       index:

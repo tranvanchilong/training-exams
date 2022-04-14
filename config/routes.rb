@@ -16,6 +16,6 @@ Rails.application.routes.draw do
     end
     resources :achievements, only: [:index]
     resources :account_activations, only:[:edit]
-    resources :password_resets, only:[:new,:create,:edit,:update]
+    resources :password_resets
   end
 end
