@@ -8,6 +8,8 @@ vi:
       update_exam_success: "Cập nhật đề thi thành công"
       update_exam_fail: "Cập nhật đề thi thất bại"
       load_exam_fail: "Không tìm thấy đề thi"
+      create_question_success: "Tạo Câu Hỏi Thành Công"
+      create_question_fail: "Tạo Câu Hỏi Thất Bại"
   layouts:
     footer:
       english: "English"
@@ -97,3 +99,8 @@ vi:
         time_limit: "Thời gian giới hạn (phút):"
         pass_score: "Điểm vượt qua:"
         btn_create_questions: "Tạo Câu Hỏi Mới"
+    questions:
+      form_question:
+        label_ques: "Đặt Câu Hỏi ?"
+        placeholder: "Vui Lòng Đặt Câu Hỏi..."
+        btn_submit: "Tạo Câu Hỏi"

@@ -8,6 +8,8 @@ en:
       update_exam_success: "Update Exam Success"
       update_exam_fail: "Update Exam Fail"
       load_exam_fail: "Exam not found"
+      create_question_success: "Create Questions Success"
+      create_question_fail: "Create Question Fail"
   layouts:
     footer:
       english: English
@@ -97,3 +99,8 @@ en:
         time_limit: "Time Limit (minutes):"
         pass_score: "Pass Score:"
         btn_create_questions: "Create Questions"
+    questions:
+      form_question:
+        label_ques: "Question ?"
+        placeholder: "please create question..."
+        btn_submit: "Create Question"
