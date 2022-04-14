@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :user_exams, dependent: :destroy
   attr_accessor :remember_token, :reset_token
+
   validates :name, presence: true,
                    length: { maximum: Settings.model.user.name_length_max }
   validates :email, format: { with: Settings.email_regex },
@@ -16,7 +17,6 @@ class User < ApplicationRecord
   def authenticated?(attribute, token)
     digest = send("#{attribute}_digest")
     return unless digest
-
     BCrypt::Password.new(digest).is_password?(token)
   end
 
