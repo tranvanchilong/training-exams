@@ -6,34 +6,32 @@ class UsersController < ApplicationController
   end
 
   def index
-    # @users=User.all
-    @users=User.paginate(page: params[:page])
+    @users = User.paginate(page: params[:page])
   end
-  def show
 
+  def show
   end
 
   def create
     @user = User.new user_params
     if @user.save
+      log_in(@user)
       flash[:success] = t "controller.user.flash_success"
       redirect_to root_url
     else
       render :new
     end
   end
+
   def edit
- 
   end
 
   def update
-
     if @user.update(user_params)
-      # Handle a successful update.
       flash[:success] = "Profile updated"
       redirect_to @user
     else
-      render 'edit'
+      render :edit
     end
   end
 
@@ -50,6 +48,10 @@ class UsersController < ApplicationController
     store_location
     flash[:danger] = "Please log in."
     redirect_to login_url
+  end
+
+  def log_in(user)
+    session[:user_id] = user.id
   end
 
   def correct_user
