@@ -5,7 +5,7 @@ User.create!(name: "admin",
              role: 1)
 30.times do |n|
   name = Faker::Name.name
-  email = "NguyenVanA-#{n+1}@gmail.com"
+  email = "NguyenVanA-#{n + 1}@gmail.com"
   password = "password"
   User.create!(name: name,
                email: email,
@@ -16,7 +16,7 @@ User.create!(name: "admin",
 end
 
 10.times do |n|
-  name = "Bai Kiem tra #{n+2}"
+  name = "Bai Kiem tra #{n + 2}"
   pass_score = rand(20..30)
   time_limit = rand(10..30)
   Exam.create!(name: name, pass_score: pass_score, time_limit: time_limit)

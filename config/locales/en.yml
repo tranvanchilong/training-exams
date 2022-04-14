@@ -58,7 +58,7 @@ en:
     password: "Password"
     login: "Login"
     new_user: "New User?"
-    signup: "Signup"
+    signup: "Sign Up"
     remember: "Remember me"
     email: "Email address"
     password: "Password"
@@ -67,6 +67,11 @@ en:
     google: "Sign in with Google"
   flash:
     invalid: "Invalid email/password combination"
+  password:
+    forgot: "Forgot your password?"
+    submit-email: "Confirm Email"
+    title: "Forgot Password"
+    enter: "Enter your Email"
   admin:
     exams:
       index:
