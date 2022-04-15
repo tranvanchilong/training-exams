@@ -10,6 +10,11 @@ en:
       load_exam_fail: "Exam not found"
       create_question_success: "Create Questions Success"
       create_question_fail: "Create Question Fail"
+      load_question_fail: "Question not found"
+      update_question_success: "Update Questions Success"
+      update_question_fail: "Update Question Fail"
+      delete_question_success: "Delete Question Success"
+      delete_question_fail: "Delete Question Fail"
   layouts:
     footer:
       english: English
@@ -104,8 +109,16 @@ en:
         time_limit: "Time Limit (minutes):"
         pass_score: "Pass Score:"
         btn_create_questions: "Create Questions"
+      exam_question:
+        btn_edit: "Edit"
+        btn_delete: "Delete"
+        confirm: "Are you sure ?"
     questions:
-      form_question:
+      form_create_question:
         label_ques: "Question ?"
         placeholder: "please create question..."
         btn_submit: "Create Question"
+      form_edit_question:
+        label_ques: " Update Question "
+        placeholder: "please update question"
+        btn_submit: "Update Question"
