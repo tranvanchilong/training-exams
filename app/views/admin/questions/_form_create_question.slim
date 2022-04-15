@@ -1,0 +1,9 @@
+.col-lg-12
+  .row
+    .col-md-9.col-md-offset-1
+      .panel.panel-default
+        = form_for(@question, url: admin_exam_questions_path) do |f|
+          .form-group
+            = f.label t(".label_ques")
+            = f.text_area :content, placeholder: t(".placeholder"), required: true, class: 'form-control'
+          = f.submit t(".btn_submit"), class: 'btn btn-success'
