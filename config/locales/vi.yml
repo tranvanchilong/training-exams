@@ -10,6 +10,11 @@ vi:
       load_exam_fail: "Không tìm thấy đề thi"
       create_question_success: "Tạo Câu Hỏi Thành Công"
       create_question_fail: "Tạo Câu Hỏi Thất Bại"
+      load_question_fail: "Không tìm thấy câu hỏi"
+      update_question_success: "Cập nhật câu hỏi thành công"
+      update_question_fail: "Cập nhật câu hỏi không thành công"
+      delete_question_success: "Xóa câu hỏi thành công"
+      delete_question_fail: "Xóa câu hỏi không thành công"
   layouts:
     footer:
       english: "English"
@@ -104,8 +109,16 @@ vi:
         time_limit: "Thời gian giới hạn (phút):"
         pass_score: "Điểm vượt qua:"
         btn_create_questions: "Tạo Câu Hỏi Mới"
+      exam_question:
+        btn_edit: "Chỉnh Sửa"
+        btn_delete: "Gỡ Bỏ"
+        confirm: "Bạn Chắc Chắn Gỡ Câu Hỏi?"
     questions:
-      form_question:
+      form_create_question:
         label_ques: "Đặt Câu Hỏi ?"
         placeholder: "Vui Lòng Đặt Câu Hỏi..."
         btn_submit: "Tạo Câu Hỏi"
+      form_edit_question:
+        label_ques: " Cập Nhật Câu Hỏi "
+        placeholder: "Vui lòng cập nhật Câu Hỏi ..."
+        btn_submit: "Cập Nhật Câu Hỏi"
