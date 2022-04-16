@@ -5,12 +5,16 @@ class User < ApplicationRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Init_model
 =======
 =======
   attr_accessor :remember_token
 >>>>>>> Fix css Home and build DashBoard admin user
 =======
+=======
+  has_many :exam_carts
+>>>>>>> profile_achiviement
   attr_accessor :remember_token, :reset_token
 >>>>>>> password_reset
   validates :name, presence: true,

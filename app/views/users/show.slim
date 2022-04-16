@@ -18,11 +18,11 @@ section#about.section.about-section.gray-bg
                 label Address
                 p #{@user.address}
               .media
-                label Number of tests
-                p Canada
+                label Number of tests 
+                p #{@user_exams.count} 
               .media
                 label Number of passes
-                p #{@user.address}
+                p #{@user_exams.where(is_passed: true).count}
             .col-md-6
               .media
                 = link_to 'Update Information', edit_user_path(id: @user.id)             

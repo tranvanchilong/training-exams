@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
+    # get "/exam_cart", to: "exam_cart#new"
+    # post "/exam_cart", to: "exam_carts#create"
     resources :users
     namespace :admin do
       resources :exams do
@@ -16,7 +18,8 @@ Rails.application.routes.draw do
     end
     resources :achievements, only: [:index]
     resources :account_activations, only:[:edit]
-    resources :password_resets, only:[:new,:create,:edit,:update]
+    resources :password_resets
+    resources :exam_cart
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
