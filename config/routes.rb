@@ -19,6 +19,6 @@ Rails.application.routes.draw do
     resources :achievements, only: [:index]
     resources :account_activations, only:[:edit]
     resources :password_resets
-    resources :exam_cart
+    resources :exam_carts
   end
 end

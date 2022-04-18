@@ -1,0 +1,18 @@
+- provide :title, t(".title")
+.col-lg-6
+  .row
+    .col-md-9.col-md-offset-1
+      .panel.panel-default
+        .panel-heading
+          h2.center= t ".h1_html"
+        .panel-body
+          = form_for(@exam_cart) do |f|
+            fieldset
+              .form-group
+                = render "shared/error_messages", object: @exam_cart
+                = f.label :exam_id, t("exam_carts.new.exam_id=exam_id")
+                = f.text_field :exam_id
+                = f.label :user_id, t("exam_carts.new.user_id")
+                = f.text_field :user_id
+              = f.submit "nop", class: "btn btn-primary"
+   
