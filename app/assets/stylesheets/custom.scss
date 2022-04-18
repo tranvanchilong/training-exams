@@ -601,3 +601,39 @@ input.delete_user {
     padding: 6px 0px;
     width: 79px;
 }
+.timer {
+  font-family: sans-serif;
+    display: inline-block;
+    padding: 17px 17px;
+    border-radius: 30px;
+    background: #634646;
+    margin-top: 150px;
+    position: absolute;
+    z-index: 2;
+    margin-left: 50%;
+}
+
+.timer__part {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.timer__btn {
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background: #8208e6;
+  cursor: pointer;
+
+}
+
+.timer__btn--start {
+  background: #00b84c;
+}
+
+.timer__btn--stop {
+  background: #ff0256;
+}
