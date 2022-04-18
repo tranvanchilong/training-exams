@@ -5,7 +5,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def edit
-     @user = User.find_by email: params[:email]
+    @user = User.find_by email: params[:email]
   end
 
   def create

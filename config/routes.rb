@@ -14,6 +14,11 @@ Rails.application.routes.draw do
         end
       end
     end
+    namespace :user do
+      resources :exams do
+        resources :questions
+      end
+    end
     resources :password_resets
   end
 end

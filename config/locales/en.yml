@@ -55,6 +55,16 @@ en:
       password: "Password"
       confirmation: "Confirmation"
       btn_submit: "Create my account"
+    exams:
+      index:
+        name: "Test name"
+        score: "Pass Score"
+        time: "Exam Time"
+        func: "Function"
+        btn_new: "New"
+        h1_html: "All Exams"
+        title: "Exams"
+        btn_begin: "Do Exam"
   shared:
     error:
       title: "The form contains"
