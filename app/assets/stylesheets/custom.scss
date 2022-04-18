@@ -358,6 +358,8 @@ input {
     margin-left: 40%;
 }
 
+/*question*/
+
 .exam-question {
     background-color: #eee;
     border-radius: 8px;
@@ -379,8 +381,10 @@ input {
     float: left;
     text-align: left;
     width: 100%;
+    height: 75%;
     padding: 0px 24px;
     .question-li {
+        height: 75%;
         font-size: 18px;
         line-height: 1.5;
         margin-bottom: 25%;
@@ -403,6 +407,8 @@ input {
 
 .form-question {
     position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background-color: white;
     border: 1px solid #b4adad;
     border-radius: 4px;
@@ -414,11 +420,16 @@ input {
     }
     .func-question {
         position: absolute;
+        display: flex;
         padding-top: 12px;
         width: 5%;
-        z-index: 10;
+        z-index: 2;
         top: 0;
         right: 0;
+        .btn-question {
+            left: -96px;
+            min-width: 136px;
+        }
     }
     .edit-question {
         position: absolute;
@@ -427,6 +438,22 @@ input {
         left: -125px;
         height: 100%;
     }
+    .create-answer {
+        position: absolute;
+        width: 148%;
+        top: -50px;
+        left: -110px;
+        height: 100%;
+    }
+}
+.func-answer {
+    position: relative;
+    display: flex;
+    padding: 0;
+    width: 12%;
+    z-index: 5;
+    top: 0;
+    right: 0;
 }
 .content-question {
     position: absolute;
@@ -437,4 +464,39 @@ input {
     height: 200px;
     margin-top: 24px;
     background-color: white;
+}
+
+/*answer*/
+.answer-ul {
+    // position: absolute;
+    float: left;
+    text-align: left;
+    width: 100%;
+    padding: 0px 36px;
+    .answer-li {
+        float: left;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 90%;
+        height: 100%;
+        word-break: break-word;
+        .answer-true {
+            color: rgb(72, 236, 39);
+        }
+    }
+    .func-answer {
+        float: right;
+        width: 8%;
+        height: 100%;
+        z-index: 5;
+        top: 10px;
+        right: 0;
+        .btn-answer {
+            top: 70%;
+            left: 9px;
+            min-width: 110px;
+        }
+    }
 }

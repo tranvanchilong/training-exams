@@ -15,6 +15,8 @@ en:
       update_question_fail: "Update Question Fail"
       delete_question_success: "Delete Question Success"
       delete_question_fail: "Delete Question Fail"
+      create_answer_success: "Create Answer Success"
+      create_answer_fail: "Create Answer Fail"
   layouts:
     footer:
       english: English
@@ -112,6 +114,7 @@ en:
       exam_question:
         btn_edit: "Edit"
         btn_delete: "Delete"
+        btn_create: "Create Answer"
         confirm: "Are you sure ?"
     questions:
       form_create_question:
@@ -122,3 +125,8 @@ en:
         label_ques: " Update Question "
         placeholder: "please update question"
         btn_submit: "Update Question"
+    answers:
+      form_create_answer:
+        label_ans: "Answer :"
+        placeholder: "please create answer..."
+        btn_submit: "Create Answer"
