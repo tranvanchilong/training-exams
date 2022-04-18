@@ -28,15 +28,6 @@ ActiveRecord::Schema.define(version: 2022_04_17_202552) do
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
-  create_table "exam_carts", force: :cascade do |t|
-    t.bigint "exam_id"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["exam_id"], name: "index_exam_carts_on_exam_id"
-    t.index ["user_id"], name: "index_exam_carts_on_user_id"
-  end
-
   create_table "exams", force: :cascade do |t|
     t.string "name"
     t.string "time_limit"
@@ -90,8 +81,6 @@ ActiveRecord::Schema.define(version: 2022_04_17_202552) do
   end
 
   add_foreign_key "answers", "questions"
-  add_foreign_key "exam_carts", "exams"
-  add_foreign_key "exam_carts", "users"
   add_foreign_key "questions", "exams"
   add_foreign_key "user_exams", "exams"
   add_foreign_key "user_exams", "users"
