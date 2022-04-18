@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :show]
+  before_action :show, only: [:show]
   def new
     @user = User.new
   end
@@ -10,7 +11,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find params[:id]
     if @user
       @user_exams = @user.user_exams.includes(:exam) # fix N+1
     else

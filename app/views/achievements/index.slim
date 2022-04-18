@@ -11,8 +11,5 @@ table.table
         th scope="row" = user_exam.exam.name
         td = user_exam.total_score
         td = user_exam.completed_time
-        - if user_exam.is_passed == true
-         td = "Passed"
-        - else
-         td = "Fail"
+        td = is_passed(user_exam)
 
