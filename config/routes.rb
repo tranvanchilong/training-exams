@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     resources :users
     namespace :admin do
       resources :exams do
-        resources :questions
+        resources :questions do
+          resources :answers
+        end
       end
     end
     resources :password_resets
