@@ -4,6 +4,15 @@ section#about.section.about-section.gray-bg
       .col-lg-6
         .about-text.go-to
           h3.dark-color = @user.name
+          section.stats
+            = render 'shared/stats'
+          .col-md-8
+            - unless current_user?(@user)
+            #follow_form
+              - if current_user.selecting?(@user)
+                = render 'unselect'
+              - else
+                = render 'select'
           h6.theme-color.lead 
           p
             | I

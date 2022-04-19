@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :selecting]
   before_action :correct_user, only: [:edit, :update, :show]
+  
   def new
     @user = User.new
   end
@@ -10,6 +11,12 @@ class UsersController < ApplicationController
   end
 
   def show
+    if @user
+      @user_exams = @user.user_exams.includes(:exam) # fix N+1
+    else
+      flash[:danger] = "User not found"
+      redirect_to root_url
+    end
   end
 
   def create
@@ -33,6 +40,13 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def selecting
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.selecting.paginate(page: params[:page])
+    render = 'show_follow'
   end
 
   private
@@ -59,4 +73,5 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     redirect_to(root_url) unless current_user?(@user)
   end
+
 end

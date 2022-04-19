@@ -7,13 +7,15 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-
     concern :imageable do
       resources :images, only: :create
     end
-
     resources :users, concerns: [:imageable]
-    resources :users
+    resources :users do
+      member do
+        get :selecting
+      end
+    end
     namespace :admin do
       resources :users
       resources :exams do
@@ -32,6 +34,8 @@ Rails.application.routes.draw do
     end
     resources :achievements, only: [:index]
     resources :account_activations, only:[:edit]
-    resources :password_resets, only:[:new,:create,:edit,:update]
+    resources :password_resets
+    resources :examcarts, only: [:create, :destroy]
+    resources :static_pages, only: [:create, :destroy]
   end
 end

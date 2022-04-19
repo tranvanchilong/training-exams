@@ -1,0 +1,3 @@
+= form_for(current_user.active_examcarts.find_by(exam_id: @user.id), 
+  html: { method: :delete }) do |f|        
+  = f.submit "Unselect", class: "btn"

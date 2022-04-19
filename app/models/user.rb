@@ -3,7 +3,8 @@ class User < ApplicationRecord
   has_one :image, as: :imageable, dependent: :destroy
   accepts_nested_attributes_for :image, reject_if: proc { |attributes| attributes[:image_url].blank? }
   attr_accessor :remember_token, :reset_token
-
+  has_many :active_examcarts, class_name: "Examcart", foreign_key: "user_id", dependent: :destroy
+  has_many :selecting, through: :active_examcarts, source: :exam
   validates :name, presence: true,
                    length: { maximum: Settings.model.user.name_length_max }
   validates :email, format: { with: Settings.email_regex },
@@ -60,9 +61,33 @@ class User < ApplicationRecord
     update_columns reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now
   end
 
+  def select(other_exam)
+  active_relationships.create(user_id: other_exam.id)
+  end
+
+  def unselect(other_exam)
+  active_relationships.find_by(exam_id: other_exam.id).destroy
+  end
+
+  def selecting?(other_exam)
+  selecting.include?(other_exam)
+  end
+
   private
 
   def downcase_email
     self.email = email.downcase
+  end
+
+  def current_user
+    if (user_id = session[:user_id])
+      @current_user ||= User.find_by(id: user_id)
+    elsif (user_id = cookies.signed[:user_id])
+      user = User.find_by(id: user_id)
+      if user && user.authenticated?(cookies[:remember_token])
+        log_in user
+        @current_user = user
+      end
+    end
   end
 end

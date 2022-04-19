@@ -1,6 +1,9 @@
 - if logged_in?
   = render "static_pages/category"
   = render "static_pages/list_exam"
+  section.stats
+  = render 'shared/stats'
+
 - else
   div class= "center jumbotron home"
     h1 = t ".header"
