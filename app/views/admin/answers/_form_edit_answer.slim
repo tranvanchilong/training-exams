@@ -1,0 +1,11 @@
+.col-lg-9
+  .row
+    .col-md-9.col-md-offset-1
+      .panel.panel-default
+        = form_for(@answer, url: admin_exam_question_answer_path) do |f|
+          .form-group
+            = render "shared/error_messages", object: f.object
+            = f.label t(".label_ans"), class: "control-label"
+            = f.text_field :content, placeholder: t(".placeholder"), required: true, class: 'form-control'
+            = f.select :is_correct_answer, raw("<option selected='selected'>true</option><option>false</option>")
+          = f.submit t(".btn_submit"), class: 'btn btn-success'
