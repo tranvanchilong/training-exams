@@ -17,6 +17,12 @@ en:
       delete_question_fail: "Delete Question Fail"
       create_answer_success: "Create Answer Success"
       create_answer_fail: "Create Answer Fail"
+      update_answer_success: "Update Answer Success"
+      update_answer_fail: "Update Answer Fail"
+      delete_answer_success: "Delete Answer Success"
+      delete_answer_fail: "Delete Answer Fail"
+      load_answer_fail: "Answer not found"
+      load_resources_fail: "Exam and Question not found. Please check data"
   layouts:
     footer:
       english: English
@@ -130,3 +136,7 @@ en:
         label_ans: "Answer :"
         placeholder: "please create answer..."
         btn_submit: "Create Answer"
+      form_edit_answer:
+        label_ans: "Answer :"
+        placeholder: "please edit answer..."
+        btn_submit: "Update Answer"

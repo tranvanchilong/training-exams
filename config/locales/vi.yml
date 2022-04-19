@@ -17,6 +17,12 @@ vi:
       delete_question_fail: "Xóa câu hỏi không thành công"
       create_answer_success: "Tạo Câu Trả Lời Thành Công"
       create_answer_fail: "Tạo Câu Trả Lời Thất Bại"
+      update_answer_success: "Cập nhật câu trả lời thành công"
+      update_answer_fail: "Cập nhật câu trả lời không thành công"
+      delete_answer_success: "Xóa câu trả lời thành công"
+      delete_answer_fail: "Xóa câu trả lời không thành công"
+      load_answer_fail: "Không tìm thấy câu trả lời"
+      load_resources_fail: "Bài kiểm tra và câu hỏi không được tìm thấy. Vui lòng kiểm tra lại"
   layouts:
     footer:
       english: "English"
@@ -130,3 +136,7 @@ vi:
         label_ans: "Câu Trả Lời :"
         placeholder: "Vui lòng nhập câ trả lời..."
         btn_submit: "Tạo Câu Trả Lời"
+      form_edit_answer:
+        label_ans: "Câu Trả Lời :"
+        placeholder: "Vui lòng nhập câ trả lời..."
+        btn_submit: "Cập Nhật Câu Trả Lời"
