@@ -13,8 +13,5 @@
       i.fa.fa-clock-o aria-hidden="true"
         = t(".time_limit")
         = @exam.time_limit
-    #clock
     = link_to t(".btn_create_questions"), new_admin_exam_question_path(exam_id: @exam.id), remote: true, class: "btn btn-success btn-create-question"
 = render partial: 'exam_question'
-link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /
-.timer

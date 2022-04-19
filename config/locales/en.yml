@@ -71,6 +71,7 @@ en:
         h1_html: "All Exams"
         title: "Exams"
         btn_begin: "Do Exam"
+        search: "Error : No data"
   shared:
     error:
       title: "The form contains"

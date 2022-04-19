@@ -2,7 +2,7 @@ class Admin::ExamsController < ApplicationController
   before_action :load_exam, only: %i(edit update destroy show)
 
   def index
-    @exams = Exam.order_by_name.paginate(page: params[:page], per_page: Settings.paginate.manage)
+    @exams = Exam.search(params[:name]).order_by_name.paginate(page: params[:page], per_page: Settings.paginate.manage)
   end
 
   def new
@@ -10,9 +10,7 @@ class Admin::ExamsController < ApplicationController
   end
 
   def show
-    # @questions = @exam.questions.paginate(page: params[:page], per_page: Settings.paginate.manage)
     @questions = Question.includes(:exam).where(exam_id: @exam.id).order_by_content
-    # answers1 = @exam.answers
     @answers = Answer.includes(:question).where(question_id: @questions.ids).order_by_content
   end
 
@@ -57,7 +55,6 @@ class Admin::ExamsController < ApplicationController
   def load_exam
     @exam = Exam.find_by id: params[:id]
     return if @exam
-
     flash[:warning] = t "controller.admin.load_exam_fail"
     redirect_to admin_exams_path
   end

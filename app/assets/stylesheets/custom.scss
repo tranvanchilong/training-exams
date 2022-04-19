@@ -601,39 +601,36 @@ input.delete_user {
     padding: 6px 0px;
     width: 79px;
 }
-.timer {
-  font-family: sans-serif;
-    display: inline-block;
-    padding: 17px 17px;
-    border-radius: 30px;
-    background: #634646;
-    margin-top: 150px;
-    position: absolute;
-    z-index: 2;
-    margin-left: 50%;
+// search
+.form-search.pub {
+    float: right;
+    width: 70%;
 }
-
-.timer__part {
-  font-size: 36px;
-  font-weight: bold;
+.text_search {
+    float: left;
 }
-
-.timer__btn {
-  width: 50px;
-  height: 50px;
-  margin-left: 16px;
-  border-radius: 50%;
-  border: none;
-  color: rgb(255, 251, 251);
-  background: #8208e6;
-  cursor: pointer;
-
+input#name {
+    width: 360px;
+    border-radius:5px;
 }
-
-.timer__btn--start {
-  background: #00b84c;
+.btn_search {
+    float: left;
+    margin-left: 20px;
 }
-
-.timer__btn--stop {
-  background: #ff0256;
+input.button--search {
+    width: 80px;
+    height: 38px;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #337ab7;
+    color: white;
+    font-weight: bold;
+}
+input.button--search:hover{
+    background-color: #0085fa;
+}
+.error_search{
+    clear: both;
+    color: red;
+    text-align: center;
 }

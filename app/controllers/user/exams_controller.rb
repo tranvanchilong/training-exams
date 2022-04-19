@@ -5,7 +5,7 @@ class User::ExamsController < ApplicationController
   end
 
   def index
-    @exams = Exam.order_by_name.paginate(page: params[:page], per_page: Settings.paginate.manage)
+    @exams = Exam.search(params[:name]).order_by_name.paginate(page: params[:page], per_page: Settings.paginate.manage)
   end
 
   def edit
