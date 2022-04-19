@@ -25,7 +25,7 @@ class Admin::QuestionsController < ApplicationController
       flash[:success] = t "controller.admin.update_question_success"
       redirect_to admin_exam_path(@exam)
     else
-      flash[:danger] =  t "controller.admin.update_question_fail"
+      flash[:danger] = t "controller.admin.update_question_fail"
       redirect_to admin_exam_path(@exam)
     end
   end
@@ -46,7 +46,7 @@ class Admin::QuestionsController < ApplicationController
     params.require(:question).permit :content
   end
 
-   def load_exam
+  def load_exam
     @exam = Exam.find_by(id: params[:exam_id])
     return if @exam
 
@@ -60,6 +60,5 @@ class Admin::QuestionsController < ApplicationController
 
     flash[:warning] = t "controller.admin.load_question_fail"
     redirect_to root_path
-
   end
 end

@@ -62,6 +62,16 @@ vi:
       password: "Mật Khẩu"
       confirmation: "Xác nhận lại mật khẩu"
       btn_submit: "Đăng ký tài khoản"
+    exams:
+      index:
+        name: "Tên Bài Kiểm Tra"
+        score: "Điểm Vượt Qua"
+        time: "Thời Gian Làm Bài"
+        func: "Chức Năng"
+        btn_new: "Tạo Mới"
+        h1_html: "Tất cả các bài Kiểm Tra"
+        title: "Bài Kiểm Tra"
+        btn_begin: "Bắt đầu"
   shared:
     error:
       title: "Biểu mẫu chứa"
