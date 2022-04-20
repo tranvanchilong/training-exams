@@ -2,6 +2,8 @@ class Exam < ApplicationRecord
   has_many :user_exams, dependent: :destroy
   has_many :questions, dependent: :destroy
   has_many :answers, through: :questions
+  has_one :image, as: :imageable, dependent: :destroy
+  accepts_nested_attributes_for :image, reject_if: proc { |attributes| attributes[:image_url].blank? }
 
   validates :name, presence: true,
                    length: { maximum: Settings.model.user.name_length_max }
