@@ -11,13 +11,8 @@
           p.card-text.text Giup on tap noi dung #{exam.name}
           a.btn.btn-primary href="#"  Bat Dau
           - unless current_user?(@user)
-            #select_form
-              - if current_user.selecting?(exam)
-                = form_for(current_user.active_examcarts.find_by(exam_id: exam.id), 
-                  html: { method: :delete }) do |f|                                          
-                  = f.submit "Unselect", class: "btn"
-              - else
-                = form_for(current_user.active_examcarts.build) do |f|
-                  div= hidden_field_tag :exam_id, exam.id
-                  = f.submit "Select", class: "btn btn-primary"
+            #select_form       
+              = form_for(current_user.active_examcarts.build) do |f|
+                div= hidden_field_tag :exam_id, exam.id
+                = f.submit "Select", class: "btn btn-primary"
                 

@@ -2,6 +2,11 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :selecting]
   before_action :correct_user, only: [:edit, :update, :show]
   
+  def correct_user
+    @user = User.find(session[:user_id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
+
   def new
     @user = User.new
   end
@@ -67,11 +72,6 @@ class UsersController < ApplicationController
 
   def log_in(user)
     session[:user_id] = user.id
-  end
-
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
   end
 
 end

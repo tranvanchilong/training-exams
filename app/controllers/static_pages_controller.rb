@@ -3,13 +3,6 @@ class StaticPagesController < ApplicationController
     @exams = Exam.all
   end
 
-  def selecting
-    @title = "Following"
-    @user = User.find(params[:id])
-    @users = @user.selecting.paginate(page: params[:page])
-    render = 'show_follow'
-  end
-
    def create
         other_exam = Exam.find(params[:exam_id])
         @rel= ExamCart.new(user_id: session[:user_id],

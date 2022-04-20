@@ -62,7 +62,7 @@ class User < ApplicationRecord
   end
 
   def select(other_exam)
-  active_relationships.create(user_id: other_exam.id)
+  active_relationships.create(exam_id: other_exam.id)
   end
 
   def unselect(other_exam)
