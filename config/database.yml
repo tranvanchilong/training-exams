@@ -9,8 +9,8 @@ default: &default
 
 development:
   <<: *default
-  database: exam_development
+  database: exam_db
 
 test:
   <<: *default
-  database: shop_test
+  database: shop
