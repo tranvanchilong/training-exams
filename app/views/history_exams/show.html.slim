@@ -1,0 +1,12 @@
+h1 HistoryExams
+.center.jumbotron.exam-show.col-lg-9
+.center.col-lg-12.exam-question
+  .view-question
+    .create-question id="question-form-#{@exam.id}"
+    ul.question-ul
+      - @questions.each do |question|
+        .form-question
+          li.question-li
+            span
+              = question.content
+              .edit-question id="question-form-edit-#{question.id}"

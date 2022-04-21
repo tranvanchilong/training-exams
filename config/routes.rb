@@ -28,6 +28,8 @@ Rails.application.routes.draw do
         end
       end
     end
+
+    resources :history_exams
     resources :password_resets
   end
 end
