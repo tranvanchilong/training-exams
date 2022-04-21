@@ -1,8 +1,8 @@
 class CreateExamcarts < ActiveRecord::Migration[6.0]
   def change
     create_table :examcarts do |t|
-      t.integer :user_id
-      t.integer :exam_id
+      t.references :user, foreign_key: true
+      t.references :exam, foreign_key: true
 
       t.timestamps
     end

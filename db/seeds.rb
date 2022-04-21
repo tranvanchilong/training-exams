@@ -15,5 +15,5 @@ end
 exams = Exam.all
 user = User.first
 selecting = exams[2..50]
-selecting.each { |exam| user.select(exam) }
+# selecting.each { |exam| user.select(exam) }
 

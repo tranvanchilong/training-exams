@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :users, concerns: [:imageable]
     resources :users do
       member do
-        get :selecting
+        get "/selecting", to: "examcarts#selecting"
       end
     end
     namespace :admin do
@@ -35,7 +35,7 @@ Rails.application.routes.draw do
     resources :achievements, only: [:index]
     resources :account_activations, only:[:edit]
     resources :password_resets
-    resources :examcarts, only: [:create, :destroy]
+    resources :examcarts, only: [:show_select, :create, :destroy]
     resources :static_pages, only: [:create, :destroy]
   end
 end
