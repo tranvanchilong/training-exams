@@ -12,8 +12,4 @@
   i1.save!
 end
 
-exams = Exam.all
-user = User.first
-selecting = exams[2..50]
-# selecting.each { |exam| user.select(exam) }
 
