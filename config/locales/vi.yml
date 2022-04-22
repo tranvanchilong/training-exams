@@ -98,6 +98,7 @@ vi:
   admin:
     exams:
       index:
+        picture: "Hình Ảnh"
         name: "Tên Bài Kiểm Tra"
         score: "Điểm Vượt Qua"
         time: "Thời Gian Làm Bài"
@@ -119,6 +120,7 @@ vi:
         btn_new: "Lưu Bài Kiểm Tra"
         h1_html: "Cập nhật Bài Kiểm Tra"
       form:
+        picture: "Hình Ảnh"
         name: "Tên Bài Kiểm Tra"
         time_limit: "Thời gian giới hạn (phút)"
         pass_score: "Điểm vượt qua"

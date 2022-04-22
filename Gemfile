@@ -26,7 +26,8 @@ gem "bootstrap-sass"
 gem "rails-i18n"
 gem "bootstrap-sass"
 gem "faker"
-
+gem "carrierwave"
+gem "mime-types", require: "mime/types/full"
 
 group :development, :test do
   gem "byebug"
