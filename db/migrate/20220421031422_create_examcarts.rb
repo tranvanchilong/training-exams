@@ -6,8 +6,5 @@ class CreateExamcarts < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    add_index :examcarts, :user_id
-    add_index :examcarts, :exam_id
-    add_index :examcarts, [:user_id, :exam_id], unique: true
   end
 end
