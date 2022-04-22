@@ -20,7 +20,7 @@ class User < ApplicationRecord
 
   def authenticated?(attribute, token)
     digest = send("#{attribute}_digest")
-    return unless digest
+      return unless digest
     BCrypt::Password.new(digest).is_password?(token)
   end
 
@@ -63,15 +63,15 @@ class User < ApplicationRecord
   end
 
   def select(other_exam)
-  active_examcarts.create(exam_id: other_exam.id)
+    active_examcarts.create(exam_id: other_exam.id)
   end
 
   def unselect(other_exam)
-  active_examcarts.find_by(exam_id: other_exam.id).destroy
+    active_examcarts.find_by(exam_id: other_exam.id).destroy
   end
 
   def selecting?(other_exam)
-  selecting.include?(other_exam)
+    selecting.include?(other_exam)
   end
 
   private

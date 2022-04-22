@@ -1,5 +1,3 @@
-
-
 10.times do |n|
   name = "Bai Kiem tra #{n + 2}"
   pass_score = rand(20..30)
@@ -11,5 +9,3 @@
   # i1["image_url"] = image_url
   i1.save!
 end
-
-
