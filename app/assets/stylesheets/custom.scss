@@ -602,7 +602,7 @@ input.delete_user {
 }
 input#name {
     width: 360px;
-    border-radius:5px;
+    border-radius: 5px;
 }
 .btn_search {
     float: left;
@@ -617,10 +617,10 @@ input.button--search {
     color: white;
     font-weight: bold;
 }
-input.button--search:hover{
+input.button--search:hover {
     background-color: #0085fa;
 }
-.error_search{
+.error_search {
     clear: both;
     color: red;
     text-align: center;
@@ -644,4 +644,52 @@ input.button--search:hover{
 .avatar-exam {
     width: 100px;
     height: 50px;
+}
+
+.timer {
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 24px 32px;
+    border-radius: 30px;
+    background: white;
+    margin-top: 64px;
+    margin-left: 48%;
+    z-index: 2;
+    box-shadow: 5px 5px 5px lightblue;
+}
+
+.timer__part {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.timer__btn {
+    width: 50px;
+    height: 50px;
+    margin-left: 16px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background: #8208e6;
+    cursor: pointer;
+}
+
+.timer__btn--start {
+    background: #00b84c;
+}
+
+.timer__btn--stop {
+    background: #ff0256;
+}
+
+li.answer-user-li {
+    list-style: none;
+    display: flex;
+
+    input.radio-btn {
+        padding: 10px;
+        margin-right: 10px;
+        width: 3%;
+        margin-top: 8px;
+    }
 }
