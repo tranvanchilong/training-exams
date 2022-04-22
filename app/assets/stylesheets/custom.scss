@@ -578,8 +578,6 @@ input {
   }
 >>>>>>> profile
 
-  /*question*/
-
   .exam-question {
     background-color: #eee;
     border-radius: 8px;
@@ -595,6 +593,7 @@ input {
   .view-question ul {
     width: 100%;
   }
+
   .exam-question {
     background-color: #eee;
     border-radius: 8px;
@@ -814,33 +813,34 @@ input {
 }
 // search
 .form-search.pub {
-    float: right;
-    width: 70%;
+  float: right;
+  width: 70%;
 }
 .text_search {
-    float: left;
+  float: left;
 }
 input#name {
-    width: 360px;
-    border-radius: 5px;
+  width: 360px;
+  border-radius: 5px;
 }
 .btn_search {
-    float: left;
-    margin-left: 20px;
+  float: left;
+  margin-left: 20px;
 }
 input.button--search {
-    width: 80px;
-    height: 38px;
-    padding: 6px;
-    border-radius: 5px;
-    background-color: #337ab7;
-    color: white;
-    font-weight: bold;
+  width: 80px;
+  height: 38px;
+  padding: 6px;
+  border-radius: 5px;
+  background-color: #337ab7;
+  color: white;
+  font-weight: bold;
 }
 input.button--search:hover {
-    background-color: #0085fa;
+  background-color: #0085fa;
 }
 .error_search {
+<<<<<<< HEAD
     clear: both;
     color: red;
     text-align: center;
@@ -856,12 +856,32 @@ input.button--search:hover {
         height: 90%;
         border-radius: 20px;
         }
+=======
+  clear: both;
+  color: red;
+  text-align: center;
+}
+.avatar_edit {
+  position: relative;
+  top: -120px;
+  right: -120px;
+  margin: 15px 0;
+  width: 50%;
+  height: 50%;
+  .avatar-user {
+    margin: 15px 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #b4adad;
+    border-radius: 2px;
+  }
+>>>>>>> exam_cart
 }
 
 .avatar-exam {
-    width: 100px;
-    height: 50px;
-
+  width: 100px;
+  height: 50px;
+}
 .form-question {
   position: relative;
   background-color: white;
@@ -901,51 +921,51 @@ input.button--search:hover {
 }
 
 .timer {
-    font-family: sans-serif;
-    display: inline-block;
-    padding: 24px 32px;
-    border-radius: 30px;
-    background: white;
-    margin-top: 64px;
-    margin-left: 48%;
-    z-index: 2;
-    box-shadow: 5px 5px 5px lightblue;
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 24px 32px;
+  border-radius: 30px;
+  background: white;
+  margin-top: 64px;
+  margin-left: 48%;
+  z-index: 2;
+  box-shadow: 5px 5px 5px lightblue;
 }
 
 .timer__part {
-    font-size: 36px;
-    font-weight: bold;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .timer__btn {
-    width: 50px;
-    height: 50px;
-    margin-left: 16px;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    background: #8208e6;
-    cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background: #8208e6;
+  cursor: pointer;
 }
 
 .timer__btn--start {
-    background: #00b84c;
+  background: #00b84c;
 }
 
 .timer__btn--stop {
-    background: #ff0256;
+  background: #ff0256;
 }
 
 li.answer-user-li {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 
-    input.radio-btn {
-        padding: 10px;
-        margin-right: 10px;
-        width: 3%;
-        margin-top: 8px;
-    }
+  input.radio-btn {
+    padding: 10px;
+    margin-right: 10px;
+    width: 3%;
+    margin-top: 8px;
+  }
 }
 //  profile
 .headerr {
