@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     end
 
     resources :users, concerns: [:imageable]
+    resources :users
     namespace :admin do
       resources :users
       resources :exams do
@@ -22,7 +23,9 @@ Rails.application.routes.draw do
     end
     namespace :user do
       resources :exams do
-        resources :questions
+        resources :questions do
+          resources :answers, only: %i(show)
+        end
       end
     end
     resources :password_resets
