@@ -9,8 +9,8 @@
             span
               b= question.content
               ul.answer-ul
+                .create-answer id="answer-form-#{question.id}"
                 - @answers.each do |answer|
-                  .create-answer id="answer-form-#{question.id}"
                   - if answer.question_id == question.id
                     li.answer-li
                       - if answer.is_correct_answer == true
