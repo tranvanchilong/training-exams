@@ -71,6 +71,7 @@ en:
         h1_html: "All Exams"
         title: "Exams"
         btn_begin: "Do Exam"
+        search: "Error : No data"
   shared:
     error:
       title: "The form contains"
@@ -98,6 +99,7 @@ en:
   admin:
     exams:
       index:
+        picture: "Picture"
         name: "Test name"
         score: "Pass Score"
         time: "Exam Time"
@@ -119,6 +121,7 @@ en:
         btn_new: "Save Exam"
         h1_html: "Update Exam"
       form:
+        picture: "Picture"
         name: "Name Exam"
         time_limit: "Time Limit (minutes)"
         pass_score: "Pass Score"
