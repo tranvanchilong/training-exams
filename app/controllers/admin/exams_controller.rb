@@ -49,7 +49,8 @@ class Admin::ExamsController < ApplicationController
   private
 
   def exam_params
-    params.require(:exam).permit :name, :pass_score, :time_limit
+    params.require(:exam).permit :name, :pass_score, :time_limit,
+                                  image_attributes: [:id, :image_url, :imageable, :_destroy]
   end
 
   def load_exam

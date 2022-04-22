@@ -1,6 +1,9 @@
 = form_for([:admin, @exam]) do |l|
   fieldset
     = render "shared/error_messages", object: l.object
+    = l.label t(".picture")
+    = l.fields_for :image_attributes do |image_l|
+      = image_l.file_field :image_url, class: "input-file previewIMG"
     = l.label :name, t(".name")
     = l.text_field :name, class: "form-control"
     = l.label :time_limit, t(".time_limit")
