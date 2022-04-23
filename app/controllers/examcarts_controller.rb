@@ -7,7 +7,7 @@ class ExamcartsController < ApplicationController
   end
 
   def selecting
-    @exam_carts = @user.examcarts.includes(:exam) # fix N+1
+    @exam_carts = @user.examcarts.includes(:exam) 
     @title= "selecting"
     @users= @user.selecting.paginate(page: params[:page])
     render 'show_select'
