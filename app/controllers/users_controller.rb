@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :selecting]
-  before_action :log_in, only: [:create]
   before_action :correct_user, only: [:edit, :update, :show, :selecting]
 
   def new
@@ -12,13 +11,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    if @user
-      @exam_cart = Examcart.all
-      @user_exams = @user.user_exams.includes(:exam) # fix N+1
-    else
-      flash[:danger] = "User not found"
-      redirect_to root_url
-    end
+    @exam_cart = Examcart.all
+    @user_exams = @user.user_exams.includes(:exam) 
   end
 
   def create
