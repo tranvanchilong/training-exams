@@ -1,10 +1,5 @@
-class StaticPagesController < ApplicationController
-  before_action :correct_user
-  
+class StaticPagesController < ApplicationController  
   def home
     @exams = Exam.all
-    @exam_users = @exam.user_exams.includes(:exam)
   end
-  
- 
 end

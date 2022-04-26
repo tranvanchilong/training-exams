@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :users
     namespace :admin do
       resources :users
+      resources :statistics
       resources :exams do
         resources :questions do
           resources :answers

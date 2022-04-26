@@ -23,8 +23,6 @@ section#about.section.about-section.gray-bg
               .media
                 label Number of passes
                 p #{@user_exams.where(is_passed: true).count}
-                p #{@exam_users.having("min(total_score) > 5" && "max(total_score) < 15").count}
-                p #{@exam_users.where(total_score: >5 && <15).count}
             .col-md-6
               .media
                 = link_to 'Update Information', edit_user_path(id: @user.id)             

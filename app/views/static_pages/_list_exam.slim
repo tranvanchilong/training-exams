@@ -9,10 +9,4 @@
           a href="#"
             h5.card-title Bai Test #{exam.name}
           p.card-text.text Giup on tap noi dung #{exam.name}
-          a.btn.btn-primary href="#"  Bat Dau (= session[:exam_id]: exam.id )
-          p #{exam.name}
-          p #{UserExam.where(exam_id: exam.id).count}
-          p #{UserExam.where(exam_id: exam.id).minimum(:total_score)}
-          p #{UserExam.where(exam_id: exam.id).maximum(:total_score)}
-          p #{UserExam.where(exam_id: exam.id).average(:total_score)}
-          p #{UserExam.having("min(total_score) > 11" && "max(total_score) < 17").count}
+          a.btn.btn-primary href="#"  Bat Dau 

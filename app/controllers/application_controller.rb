@@ -13,10 +13,4 @@ class ApplicationController < ActionController::Base
   def default_url_options
     {locale: I18n.locale}
   end
-
-   def correct_user
-    @user = User.find_by(id: params[:id])
-    @exam = Exam.first
-    redirect_to(root_url) unless current_user?(@user)
-  end
 end
