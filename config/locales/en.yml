@@ -1,5 +1,6 @@
 en:
   exam_online: Exam Online
+  exam_welcom: "Welcome to Exam Online"
   controller:
     user:
       flash_success: "Welcome to the Exam onlie"
@@ -72,10 +73,6 @@ en:
         title: "Exams"
         btn_begin: "Do Exam"
         search: "Error : No data"
-        history_html: "History Exams"
-        func_2: "Exam Details"
-        score_2: "Test score"
-        btn_begin_2: "Detail"
   shared:
     error:
       title: "The form contains"

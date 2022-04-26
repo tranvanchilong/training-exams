@@ -1,5 +1,6 @@
 vi:
   exam_online: "Exam Online"
+  exam_welcom: "Chào mừng bạn đến với cuộc thi trắc nghiệm Exam Online"
   controller:
     user:
       flash_success: "Chào mừng đến với Exam Online!"
@@ -73,10 +74,6 @@ vi:
         title: "Bài Kiểm Tra"
         btn_begin: "Bắt đầu"
         search: "Lỗi :không có dữ liệu"
-        history_html: "Lịch sử tất cả các bài Kiểm Tra"
-        func_2: "Chi Tiết Bài Thi"
-        score_2: "Điểm Thi"
-        btn_begin_2: "Chi tiết"
   shared:
     error:
       title: "Biểu mẫu chứa"
