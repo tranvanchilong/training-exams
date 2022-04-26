@@ -1,5 +1,6 @@
 vi:
   exam_online: "Exam Online"
+  exam_welcom: "Chào mừng bạn đến với cuộc thi trắc nghiệm Exam Online"
   controller:
     user:
       flash_success: "Chào mừng đến với Exam Online!"

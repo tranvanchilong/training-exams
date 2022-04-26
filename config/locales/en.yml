@@ -1,5 +1,6 @@
 en:
   exam_online: Exam Online
+  exam_welcom: "Welcome to Exam Online"
   controller:
     user:
       flash_success: "Welcome to the Exam onlie"

@@ -109,12 +109,6 @@ footer {
 
 /* home */
 
-// .home {
-//   background-image: url(/assets/index_background.jpg);
-//   background-size: contain;
-//   margin-left: 325px;
-//   margin-top: 52px;
-// }
 .jumbotron {
     background: url("/assets/index_background.jpg") no-repeat center center;
     -webkit-background-size: 100% 100%;
@@ -328,10 +322,6 @@ input {
     filter: alpha(opacity=50);
 }
 
-// .center.jumbotron.home {
-//   width: 75%;
-//   right: 0;
-// }
 .panel-default {
     position: absolute;
     top: 53px;
@@ -372,10 +362,11 @@ input {
 
 .update_user {
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .col-md-offset-3 {
-    margin-left: 40%;
+    margin-left: 15%;
 }
 
 /*question*/
@@ -624,22 +615,18 @@ input.button--search:hover {
     clear: both;
     color: red;
     text-align: center;
-
-    .avatar_edit {
-        position: relative;
-        top: -120px;
-        right: -120px;
-        margin: 15px 0;
-        width: 50%;
-        height: 50%;
-        .avatar-user {
-            margin: 15px 0;
-            width: 100%;
-            height: 100%;
-            border: 1px solid #b4adad;
-            border-radius: 2px;
+}
+.avatar_edit {
+    position: relative;
+    margin: 15px 70px;
+    width: 50%;
+    height: 50%;
+    .avatar-user {
+        margin-left: 70px;
+        width: 100%;
+        height: 90%;
+        border-radius: 20px;
         }
-    }
 }
 
 .avatar-exam {
@@ -692,5 +679,179 @@ li.answer-user-li {
         margin-right: 10px;
         width: 3%;
         margin-top: 8px;
+    }
+}
+//  profile
+.headerr {
+    background-image: linear-gradient(to right bottom,rgba(71, 233, 22, 0.7),rgba(48, 185, 219, 0.3));
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    height: 450px;
+    margin-bottom: 30px;
+}
+.profile {
+    width: 100%;
+    height: 200px;
+}
+.header__avata-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 2px 4px 5px 0px #787e80;
+    float: left;
+    margin-left: 50px;
+}
+img.gravatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+h1.header__left-name {
+    margin-left: 200px;
+    float: left;
+}
+.header__left-icon {
+    text-decoration: none;
+    font-size: 30px;
+    float: left;
+    margin-left: 130px;
+        i.fa.fa-facebook{
+        color: #0066cc;
+        display: flex;
+        margin-left: 5px;
+        }
+
+        i.fa.fa-gitlab{
+            color: #e63f15;
+            display: flex;
+        }
+        i.fa.fa-twitter {
+            color: blue;
+            display: flex;
+            margin-left: 1px;
+        }
+
+        i.fa.fa-github {
+            color: deeppink;
+            display: flex;
+            margin-left: 2px;
+        }
+}
+.header__left-icon a {
+    text-decoration: none;
+    color: #a75f5f;
+    margin: 4px;
+    display: inline-block;
+    transform: scale(1);
+    transition-duration: 0.4s;
+    border: 5px solid white;
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    box-shadow: 0px 5px 5px 1px ;
+    animation: scaleIcon 2s linear infinite;
+    margin-left: 35px;
+}
+
+@keyframes scaleIcon{
+    100%{
+        transform: scale(1.1);
+    }
+}
+.fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+}
+.personal_information{
+    clear: left;
+    margin-left: 50px;
+}
+
+.information_left {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    float: left;
+    width: 250px;
+}
+
+.information_left h3 {
+    color: #2e1313;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.information_left p {
+    color: rgb(48, 44, 44);
+    padding-top: 6px;
+    font-size: 1.7rem;
+}
+.information_right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    float: right;
+    width: 170px;
+    margin-left: 20px;
+        h3 {
+            color: #2e1313;
+            font-size: 1.7rem;
+            font-weight: bold;
+        }
+        p {
+            color: rgb(48, 44, 44);
+            padding-top: 6px;
+            font-size: 1.7rem;
+        }
+}
+.logo_user{
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: none;
+    }
+}
+.marque{
+    float: left;
+    margin: auto;
+    width: 35%;
+
+    margin-left: 30px;
+    margin-top: 15px;
+    a{
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+.edit_profile{
+    background-image: linear-gradient(to right bottom,rgba(116, 188, 236, 0.7),rgba(48, 185, 219, 0.3));
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px;
+    height: auto;
+    width: 60%;
+    margin: 30px 0px 30px 400px;
+
+}
+.update_user{
+    .form-control{
+    width: 430px;
+    }
+    input#user_image_attributes_image_url {
+        margin-left: 115px;
+        width: 200px;
+    }
+    input.btn.btn-primary.btn_submit {
+        width: 430px;
     }
 }

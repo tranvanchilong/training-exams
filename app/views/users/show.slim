@@ -1,12 +1,37 @@
 - provide(:title, @user.name)
-.row
-  aside.col-md-4
-    section.user_info
-      h1
-        = gravatar_for @user
-      h2
-        = @user.name
-      h3
-        = @user.email
-      h4
-        = @user.address
+.col-lg.9
+  .headerr
+    .profile
+      h1.header__avata-img= gravatar_for @user
+      h1.header__left-name= @user.name
+      .header__left-icon
+        a href="" target="_blank"
+          i.fa.fa-facebook aria-hidden="true"
+        a href="" target="_blank"
+          i.fa.fa-gitlab aria-hidden="true"
+        a href="" target="_blank"
+          i.fa.fa-twitter aria-hidden="true"
+        a href=""
+          i.fa.fa-github aria-hidden="true"
+    .personal_information
+      .information_left
+        h3
+          | NAME
+        p= @user.name
+        h3
+          | NGÀY SINH
+        p 15/03/2002
+      .information_left
+        h3
+          | EMAIL
+        p= @user.email
+        h3
+          | ĐỊA CHỈ
+        p= @user.address
+      .information_right
+        h3
+          | SỐ LẦN TEST
+        p= 0
+        h3
+          | SỐ LẦN ĐẬU
+        p 0
