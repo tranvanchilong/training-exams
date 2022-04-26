@@ -10,13 +10,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find params[:id]
-    if @user
-      @user_exams = @user.user_exams.includes(:exam) # fix N+1
-    else
-      flash[:danger] = "User not found"
-      redirect_to root_url
-    end
+      @user_exams = @user.user_exams.includes(:exam) 
+      @exam_users = @exam.user_exams.includes(:user)
   end
 
   def create
@@ -64,6 +59,7 @@ class UsersController < ApplicationController
 
   def correct_user
     @user = User.find(params[:id])
+    @exam = Exam.find(params[:id])
     redirect_to(root_url) unless current_user?(@user)
   end
 end

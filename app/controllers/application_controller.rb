@@ -13,4 +13,10 @@ class ApplicationController < ActionController::Base
   def default_url_options
     {locale: I18n.locale}
   end
+
+   def correct_user
+    @user = User.find(session[:user_id])
+    @exam = Exam.find(session[:user_id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
 end

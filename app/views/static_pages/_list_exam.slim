@@ -4,9 +4,15 @@
     .col-md-4
       .card.card-course-item.test-exam
         a href="#"
-          img.card-img-top alt=("KHOA KIEM TRA SQL") src="#{exam.image_exam}" /
+          img.card-img-top alt=("KHOA KIEM TRA SQL") 
         .card-body
           a href="#"
             h5.card-title Bai Test #{exam.name}
           p.card-text.text Giup on tap noi dung #{exam.name}
-          a.btn.btn-primary href="#"  Bat Dau
+          a.btn.btn-primary href="#"  Bat Dau (= session[:exam_id]: exam.id )
+          p #{exam.name}
+          p #{UserExam.where(exam_id: exam.id).count}
+          p #{UserExam.where(exam_id: exam.id).minimum(:total_score)}
+          p #{UserExam.where(exam_id: exam.id).maximum(:total_score)}
+          p #{UserExam.where(exam_id: exam.id).average(:total_score)}
+          p #{UserExam.having("min(total_score) > 11" && "max(total_score) < 17").count}
