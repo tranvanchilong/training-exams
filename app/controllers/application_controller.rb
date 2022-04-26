@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
    def correct_user
     @user = User.find_by(id: params[:id])
-    @exam = Exam.find_by(id: params[:id])
+    @exam = Exam.first
     redirect_to(root_url) unless current_user?(@user)
   end
 end
