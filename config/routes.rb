@@ -23,6 +23,7 @@ Rails.application.routes.draw do
         end
       end
     end
+<<<<<<< HEAD
     namespace :user do
       resources :exams do
         resources :result_exams
@@ -34,5 +35,10 @@ Rails.application.routes.draw do
     resources :password_resets
     resources :account_activations,only:[:edit]
     resources :password_resets,only:[:new,:create,:edit,:update]
+=======
+    resources :achievements, only: [:index]
+    resources :account_activations, only:[:edit]
+    resources :password_resets, only:[:new,:create,:edit,:update]
+>>>>>>> show_exam_statistic
   end
 end

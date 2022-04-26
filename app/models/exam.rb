@@ -1,6 +1,5 @@
 class Exam < ApplicationRecord
   has_many :user_exams, dependent: :destroy
-  has_many :exam_carts
   has_many :questions, dependent: :destroy
   has_many :answers, through: :questions
   has_one :image, as: :imageable, dependent: :destroy
