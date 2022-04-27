@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :show]
-
+  
   def new
     @user = User.new
   end
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user_exams = @user.user_exams.includes(:exam) 
   end
 
   def create
@@ -22,9 +23,6 @@ class UsersController < ApplicationController
     else
       render :new
     end
-  end
-
-  def edit
   end
 
   def update
@@ -45,11 +43,10 @@ class UsersController < ApplicationController
   end
 
   def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = "Please log in."
-      redirect_to login_url
-    end
+    return if logged_in?
+    store_location
+    flash[:danger] = "Please log in."
+    redirect_to login_url
   end
 
   def log_in(user)

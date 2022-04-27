@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'exams/new'
+  
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
     get "/signup", to: "users#new"
@@ -10,11 +12,11 @@ Rails.application.routes.draw do
     concern :imageable do
       resources :images, only: :create
     end
-
     resources :users, concerns: [:imageable]
     resources :users
     namespace :admin do
       resources :users
+      resources :statistics, only: [:index]
       resources :exams do
         resources :questions do
           resources :answers
@@ -30,5 +32,7 @@ Rails.application.routes.draw do
       end
     end
     resources :password_resets
+    resources :account_activations,only:[:edit]
+    resources :password_resets,only:[:new,:create,:edit,:update]
   end
 end

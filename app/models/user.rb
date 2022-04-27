@@ -22,7 +22,6 @@ class User < ApplicationRecord
     BCrypt::Password.new(digest).is_password?(token)
   end
 
-
   class << self
     def digest(string)
       cost = if ActiveModel::SecurePassword.min_cost
