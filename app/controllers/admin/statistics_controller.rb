@@ -1,5 +1,5 @@
 class Admin::StatisticsController < ApplicationController
-    def index
+  def index
     @exams = Exam.all
   end
 end

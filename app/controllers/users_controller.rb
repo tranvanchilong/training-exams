@@ -11,8 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
-      @user_exams = @user.user_exams.includes(:exam) 
-      @exam_users = @exam.user_exams.includes(:user)
+    @user_exams = @user.user_exams.includes(:exam) 
   end
 
   def create
@@ -24,9 +23,6 @@ class UsersController < ApplicationController
     else
       render :new
     end
-  end
-
-  def edit
   end
 
   def update
@@ -59,7 +55,6 @@ class UsersController < ApplicationController
 
   def correct_user
     @user = User.find(params[:id])
-    @exam = Exam.find(params[:id])
     redirect_to(root_url) unless current_user?(@user)
   end
 end

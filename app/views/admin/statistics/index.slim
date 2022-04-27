@@ -31,6 +31,6 @@
                   td.border-0.align-middle
                     strong = UserExam.where(exam_id: exam.id).minimum(:total_score)
                   td.border-0.align-middle
-                      strong =UserExam.where(exam_id: exam.id).maximum(:total_score)
+                    strong = UserExam.where(exam_id: exam.id).maximum(:total_score)
                   td.border-0.align-middle
-                      strong =UserExam.where(exam_id: exam.id).average(:total_score).truncate(2)
+                    strong = UserExam.where(exam_id: exam.id).average(:total_score).truncate(2)
