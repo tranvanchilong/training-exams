@@ -5,10 +5,147 @@
 
 $gray-medium-light: #eaeaea;
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* miscellaneous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
 /* universal */
 
 body {
   padding-top: 60px;
+  color: #6f8ba4;
+  margin-top: 20px;
+}
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+.gray-bg {
+  background-color: #f5f5f5;
+}
+img {
+  max-width: 100%;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+/* About Me 
+---------------------*/
+.about-text h3 {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+@media (max-width: 767px) {
+  .about-text h3 {
+    font-size: 35px;
+  }
+}
+.about-text h6 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .about-text h6 {
+    font-size: 18px;
+  }
+}
+.about-text p {
+  font-size: 18px;
+  max-width: 450px;
+}
+.about-text p mark {
+  font-weight: 600;
+  color: #20247b;
+}
+
+.about-list {
+  padding-top: 10px;
+}
+.about-list .media {
+  padding: 5px 0;
+}
+.about-list label {
+  color: #20247b;
+  font-weight: 600;
+  width: 88px;
+  margin: 0;
+  position: relative;
+}
+.about-list label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 11px;
+  width: 1px;
+  height: 12px;
+  background: #20247b;
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  margin: auto;
+  opacity: 0.5;
+}
+.about-list p {
+  margin: 0;
+  font-size: 15px;
+}
+
+@media (max-width: 991px) {
+  .about-avatar {
+    margin-top: 30px;
+  }
+}
+
+.about-section .counter {
+  padding: 22px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+}
+.about-section .counter .count-data {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.about-section .counter .count {
+  font-weight: 700;
+  color: #20247b;
+  margin: 0 0 5px;
+}
+.about-section .counter p {
+  font-weight: 600;
+  margin: 0;
+}
+mark {
+  background-image: linear-gradient(
+    rgba(252, 83, 86, 0.6),
+    rgba(252, 83, 86, 0.6)
+  );
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+  background-color: transparent;
+  padding: 0;
+  color: currentColor;
+}
+.theme-color {
+  color: #fc5356;
+}
+.dark-color {
+  color: #20247b;
 }
 
 section {
@@ -21,7 +158,6 @@ textarea {
 
 .center {
   text-align: center;
-
   h1 {
     margin-bottom: 10px;
   }
@@ -69,7 +205,6 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-
   &:hover {
     color: white;
     text-decoration: none;
@@ -83,23 +218,18 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
-
   a {
     color: $gray;
-
     &:hover {
       color: $gray-darker;
     }
   }
-
   small {
     float: left;
   }
-
   ul {
     float: right;
     list-style: none;
-
     li {
       float: left;
       margin-left: 15px;
@@ -109,6 +239,12 @@ footer {
 
 /* home */
 
+// .home {
+//   background-image: url(/assets/index_background.jpg);
+//   background-size: contain;
+//   margin-left: 325px;
+//   margin-top: 52px;
+// }
 .jumbotron {
   background: url("/assets/index_background.jpg") no-repeat center center;
   -webkit-background-size: 100% 100%;
@@ -202,23 +338,18 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
-
   a {
     color: $gray;
-
     &:hover {
       color: $gray-darker;
     }
   }
-
   small {
     float: left;
   }
-
   ul {
     float: right;
     list-style: none;
-
     li {
       float: left;
       margin-left: 15px;
@@ -244,22 +375,18 @@ aside {
   section.user_info {
     margin-top: 20px;
   }
-
   section {
     padding: 10px 0;
     margin-top: 20px;
-
     &:first-child {
       border: 0;
       padding-top: 0;
     }
-
     span {
       display: block;
       margin-bottom: 3px;
       line-height: 1;
     }
-
     h1 {
       font-size: 1.4em;
       text-align: left;
@@ -572,6 +699,10 @@ input {
   width: 100px;
 }
 
+ul.pagination {
+  margin-left: 50%;
+}
+
 input.delete_user {
   height: 37px;
   background-color: rgb(190, 62, 62);
@@ -615,17 +746,21 @@ input.button--search:hover {
   clear: both;
   color: red;
   text-align: center;
-}
-.avatar_edit {
-  position: relative;
-  margin: 15px 70px;
-  width: 50%;
-  height: 50%;
-  .avatar-user {
-    margin-left: 70px;
-    width: 100%;
-    height: 90%;
-    border-radius: 20px;
+
+  .avatar_edit {
+    position: relative;
+    top: -120px;
+    right: -120px;
+    margin: 15px 0;
+    width: 50%;
+    height: 50%;
+    .avatar-user {
+      margin: 15px 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #b4adad;
+      border-radius: 2px;
+    }
   }
 }
 
@@ -679,187 +814,5 @@ li.answer-user-li {
     margin-right: 10px;
     width: 3%;
     margin-top: 8px;
-  }
-}
-//  profile
-.headerr {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(71, 233, 22, 0.7),
-    rgba(48, 185, 219, 0.3)
-  );
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  padding: 30px;
-  margin-top: 30px;
-  height: 450px;
-  margin-bottom: 30px;
-}
-.profile {
-  width: 100%;
-  height: 200px;
-}
-.header__avata-img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 2px 4px 5px 0px #787e80;
-  float: left;
-  margin-left: 50px;
-}
-img.gravatar {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-bottom: 10px;
-}
-h1.header__left-name {
-  margin-left: 200px;
-  float: left;
-}
-.header__left-icon {
-  text-decoration: none;
-  font-size: 30px;
-  float: left;
-  margin-left: 130px;
-  i.fa.fa-facebook {
-    color: #0066cc;
-    display: flex;
-    margin-left: 5px;
-  }
-
-  i.fa.fa-gitlab {
-    color: #e63f15;
-    display: flex;
-  }
-  i.fa.fa-twitter {
-    color: blue;
-    display: flex;
-    margin-left: 1px;
-  }
-
-  i.fa.fa-github {
-    color: deeppink;
-    display: flex;
-    margin-left: 2px;
-  }
-}
-.header__left-icon a {
-  text-decoration: none;
-  color: #a75f5f;
-  margin: 4px;
-  display: inline-block;
-  transform: scale(1);
-  transition-duration: 0.4s;
-  border: 5px solid white;
-  border-radius: 50%;
-  background-color: white;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  box-shadow: 0px 5px 5px 1px;
-  animation: scaleIcon 2s linear infinite;
-  margin-left: 35px;
-}
-
-@keyframes scaleIcon {
-  100% {
-    transform: scale(1.1);
-  }
-}
-.fa-brands,
-.fab {
-  font-family: "Font Awesome 6 Brands";
-  font-weight: 400;
-}
-.personal_information {
-  clear: left;
-  margin-left: 50px;
-}
-
-.information_left {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  float: left;
-  width: 250px;
-}
-
-.information_left h3 {
-  color: #2e1313;
-  font-size: 1.7rem;
-  font-weight: bold;
-}
-
-.information_left p {
-  color: rgb(48, 44, 44);
-  padding-top: 6px;
-  font-size: 1.7rem;
-}
-.information_right {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  float: right;
-  width: 170px;
-  margin-left: 20px;
-  h3 {
-    color: #2e1313;
-    font-size: 1.7rem;
-    font-weight: bold;
-  }
-  p {
-    color: rgb(48, 44, 44);
-    padding-top: 6px;
-    font-size: 1.7rem;
-  }
-}
-.logo_user {
-  img {
-    width: 50px;
-    height: 50px;
-    border-radius: none;
-  }
-}
-.marque {
-  float: left;
-  margin: auto;
-  width: 35%;
-
-  margin-left: 30px;
-  margin-top: 15px;
-  a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-  }
-}
-.edit_profile {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(116, 188, 236, 0.7),
-    rgba(48, 185, 219, 0.3)
-  );
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  padding: 30px;
-  height: auto;
-  width: 60%;
-  margin: 30px 0px 30px 400px;
-}
-.update_user {
-  .form-control {
-    width: 430px;
-  }
-  input#user_image_attributes_image_url {
-    margin-left: 115px;
-    width: 200px;
-  }
-  input.btn.btn-primary.btn_submit {
-    width: 430px;
   }
 }

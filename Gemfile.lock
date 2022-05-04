@@ -159,12 +159,7 @@ GEM
     mini_mime (1.1.2)
     minitest (5.15.0)
     nio4r (2.5.8)
-<<<<<<< HEAD
-    nokogiri (1.13.4)
-      mini_portile2 (~> 2.8.0)
-=======
     nokogiri (1.13.4-x86_64-linux)
->>>>>>> profile_achiviement
       racc (~> 1.4)
     pg (1.3.5)
     public_suffix (4.0.7)
