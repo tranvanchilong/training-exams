@@ -1,5 +1,4 @@
-class Admin::StatisticsController < ApplicationController
-  def index
-    @exams = Exam.all
+class StaticPagesController < ApplicationController
+  def home
   end
 end
