@@ -62,15 +62,15 @@ class User < ApplicationRecord
     update_columns reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now
   end
 
-  def select(other_exam)
+  def select other_exam
     active_examcarts.create(exam_id: other_exam.id)
   end
 
-  def unselect(other_exam)
+  def unselect other_exam
     active_examcarts.find_by(exam_id: other_exam.id).destroy
   end
 
-  def selecting?(other_exam)
+  def selecting? other_exam
     selecting.include?(other_exam)
   end
 
@@ -80,3 +80,4 @@ class User < ApplicationRecord
     self.email = email.downcase
   end
 end
+

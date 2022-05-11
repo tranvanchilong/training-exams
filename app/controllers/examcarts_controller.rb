@@ -14,7 +14,7 @@ class ExamcartsController < ApplicationController
   end
                       
   def create
-    other_exam = Exam.find(params[:exam_id])
+    other_exam = Exam.find_by(id: params[:exam_id])
     @rel= Examcart.new(user_id: session[:user_id],
                                 exam_id: other_exam.id)
                                 @rel.save
@@ -22,8 +22,8 @@ class ExamcartsController < ApplicationController
   end
  
   def destroy
-    @user = Examcart.find(params[:id]).exam
-    current_user.unselect(@user)
+    @exam = Examcart.find_by(id: params[:id]).exam
+    current_user.unselect(@exam)
     redirect_to(root_url)
   end
 end
