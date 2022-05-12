@@ -1,0 +1,181 @@
+vi:
+  exam_online: "Exam Online"
+  exam_welcom: "Chào mừng bạn đến với cuộc thi trắc nghiệm Exam Online"
+  controller:
+    user:
+      flash_success: "Chào mừng đến với Exam Online!"
+    admin:
+      create_exam_success: "Tạo đề thi thành công"
+      update_exam_success: "Cập nhật đề thi thành công"
+      update_exam_fail: "Cập nhật đề thi thất bại"
+      load_exam_fail: "Không tìm thấy đề thi"
+      create_question_success: "Tạo Câu Hỏi Thành Công"
+      create_question_fail: "Tạo Câu Hỏi Thất Bại"
+      load_question_fail: "Không tìm thấy câu hỏi"
+      update_question_success: "Cập nhật câu hỏi thành công"
+      update_question_fail: "Cập nhật câu hỏi không thành công"
+      delete_question_success: "Xóa câu hỏi thành công"
+      delete_question_fail: "Xóa câu hỏi không thành công"
+      create_answer_success: "Tạo Câu Trả Lời Thành Công"
+      create_answer_fail: "Tạo Câu Trả Lời Thất Bại"
+      update_answer_success: "Cập nhật câu trả lời thành công"
+      update_answer_fail: "Cập nhật câu trả lời không thành công"
+      delete_answer_success: "Xóa câu trả lời thành công"
+      delete_answer_fail: "Xóa câu trả lời không thành công"
+      load_answer_fail: "Không tìm thấy câu trả lời"
+      load_resources_fail: "Bài kiểm tra và câu hỏi không được tìm thấy. Vui lòng kiểm tra lại"
+      load_history_exam_fail: "Không tìm thấy lịch sử  làm bài kiểm tra"
+  layouts:
+    footer:
+      english: "English"
+      vietnamese: "Việt Nam"
+    header:
+      home: "Trang chủ"
+      exams: "Bài kiểm tra"
+      login: "Đăng nhập"
+      Users: "Người Dùng"
+      Account: "Tài Khoản"
+      Profile: "Thông Tin Cá Nhân"
+      Settings: "Cài Đặt"
+      Logout: "Đăng Xuất"
+  static_pages:
+    sidebar:
+      admin_func1: "Quản lý các bài kiểm tra"
+      admin_func2: "Quản lý người dùng"
+      admin_func3: "Thống kê kết quả kiểm tra"
+      admin_func4: "Quản lý yêu cầu các bài kiểm tra"
+      user_func1: "Các bài kiểm tra"
+      user_func2: "Lịch sử các bài kiểm tra"
+      admin_title: "Quản lý Hệ Thống Exam Online"
+      user_title: "Quản lý Exam cá nhân"
+    home:
+      title: "Trang chủ"
+      header: "Chào mừng đến với Exam Online"
+      content: "Phát triển kỹ năng lập trình của bạn bằng những bài kiểm tra
+        miễn phí và chất lượng"
+      signup: "Hãy đăng ký"
+  users:
+    new:
+      title: "Đăng Ký"
+      h1_html: "Đăng Ký"
+      para_html: "Đây sẽ là trang đăng ký cho người dùng mới."
+      name: "Họ Tên"
+      email: "Địa Chỉ Mail"
+      password: "Mật Khẩu"
+      confirmation: "Xác nhận lại mật khẩu"
+      btn_submit: "Đăng ký tài khoản"
+    exams:
+      index:
+        name: "Tên Bài Kiểm Tra"
+        score: "Điểm Vượt Qua"
+        time: "Thời Gian Làm Bài"
+        func: "Chức Năng"
+        btn_new: "Tạo Mới"
+        h1_html: "Tất cả các bài Kiểm Tra"
+        title: "Bài Kiểm Tra"
+        btn_begin: "Bắt đầu"
+        search: "Lỗi :không có dữ liệu"
+    history_do_exams:
+      show:
+        title: "Lịch Sử Bài Kiểm Tra"
+        h1_html: "Lịch Sử Bài Kiểm Tra"
+        name: "Tên Bài Kiểm Tra"
+        name_user: "Tên Người Dùng"
+        total_score: "Điểm Vượt Qua"
+        submit_time: "Thời Gian Nộp Bài"
+        score: "Điểm Vượt Qua"
+        time: "Thời Gian Làm Bài"
+        is_correct_answer: "Số Câu Đúng"
+        time_finish: "Thời gian nộp bài"
+  shared:
+    error:
+      title: "Biểu mẫu chứa"
+      error: "lỗi"
+  sessions:
+    title: "Đăng Nhập"
+    h1: "Đăng Nhập"
+    login: "Đăng Nhập"
+    new_user: "Người dùng mới?"
+    signup: "Đăng ký"
+    remember: "Ghi nhớ mật khẩu"
+    email: "Địa chỉ Email"
+    password: "Mật Khẩu"
+    or: "Hoặc"
+    facebook: "Đăng nhập bằng Facebook"
+    google: "Đăng nhập bằng Google"
+  flash:
+    invalid: "Sai email hoặc mật khẩu"
+  password:
+    forgot: "Quên mật khẩu?"
+    submit-email: "Xác nhận Email"
+    title: "Quên mật khẩu"
+    enter: "Nhập địa chỉ Email"
+  admin:
+    exams:
+      index:
+        picture: "Hình Ảnh"
+        name: "Tên Bài Kiểm Tra"
+        score: "Điểm Vượt Qua"
+        time: "Thời Gian Làm Bài"
+        func: "Chức Năng"
+        btn_new: "Tạo Mới"
+        h1_html: "Tất cả các bài Kiểm Tra"
+        title: "Bài Kiểm Tra"
+      exam:
+        btn_edit: "Chỉnh Sửa"
+        btn_detail: "Chi Tiết"
+        btn_delete: "Xóa"
+        confirm_delete: "Bạn Chắc Chắn?"
+      new:
+        title: "Tạo Bài Kiểm Tra"
+        btn_new: "Xác Nhận"
+        h1_html: "Tạo Bài Kiểm Tra"
+      edit:
+        title: "Cập nhật Bài Kiểm Tra"
+        btn_new: "Lưu Bài Kiểm Tra"
+        h1_html: "Cập nhật Bài Kiểm Tra"
+      form:
+        picture: "Hình Ảnh"
+        name: "Tên Bài Kiểm Tra"
+        time_limit: "Thời gian giới hạn (phút)"
+        pass_score: "Điểm vượt qua"
+      show:
+        created_at: " Thời Gian Tạo:"
+        time_limit: "Thời gian giới hạn (phút):"
+        pass_score: "Điểm vượt qua:"
+        btn_create_questions: "Tạo Câu Hỏi Mới"
+      exam_question:
+        btn_edit: "Chỉnh Sửa"
+        btn_delete: "Gỡ Bỏ"
+        btn_create: "Tạo Câu Trả Lời"
+        confirm: "Bạn Chắc Chắn Gỡ Câu Hỏi?"
+    questions:
+      form_create_question:
+        label_ques: "Đặt Câu Hỏi ?"
+        placeholder: "Vui Lòng Đặt Câu Hỏi..."
+        btn_submit: "Tạo Câu Hỏi"
+      form_edit_question:
+        label_ques: " Cập Nhật Câu Hỏi "
+        placeholder: "Vui lòng cập nhật Câu Hỏi ..."
+        btn_submit: "Cập Nhật Câu Hỏi"
+    answers:
+      form_create_answer:
+        label_ans: "Câu Trả Lời :"
+        placeholder: "Vui lòng nhập câ trả lời..."
+        btn_submit: "Tạo Câu Trả Lời"
+      form_edit_answer:
+        label_ans: "Câu Trả Lời :"
+        placeholder: "Vui lòng nhập câ trả lời..."
+        btn_submit: "Cập Nhật Câu Trả Lời"
+  user:
+    exams:
+      show:
+        btn_submit: "Nộp Bài"
+        login_name: "VUi lòng Đăng Nhập : "
+        login_click: "Kích tại link này"
+      header_show:
+        created_at: " Thời Gian Tạo:"
+        time_limit: "Thời gian giới hạn (phút):"
+        pass_score: "Điểm vượt qua:"
+      index:
+        btn_submit: "Bắt Đầu"

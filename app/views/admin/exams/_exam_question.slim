@@ -1,0 +1,36 @@
+.center.col-lg-12.exam-question
+  .view-question
+    .create-question id="question-form-#{@exam.id}"
+    ul.question-ul
+      - @questions.each do |question|
+        .form-question
+          .edit-question id="question-form-edit-#{question.id}"
+          li.question-li
+            span
+              b= question.content
+              ul.answer-ul
+                .create-answer id="answer-form-#{question.id}"
+                - @answers.each do |answer|
+                  - if answer.question_id == question.id
+                    li.answer-li
+                      - if answer.is_correct_answer == true
+                        span.answer-true= answer.content
+                      - else
+                        = answer.content
+                    .dropdown.func-answer
+                      .dropdown-toggle data-toggle="dropdown"...
+                      ul.dropdown-menu.btn-answer
+                        li
+                          = link_to t(".btn_edit"), edit_admin_exam_question_answer_path(exam_id: @exam.id, question_id: question.id, id: answer.id), remote: true
+                        li
+                          = link_to t(".btn_delete"), admin_exam_question_answer_path(exam_id: @exam.id, question_id: question.id, id: answer.id), method: :delete, data: {confirm: t(".confirm")}
+                    .edit-answer id="answer-form-edit-#{answer.id}"
+          .dropdown.func-question
+            button.btn.btn-primary.dropdown-toggle data-toggle="dropdown" type="button"  ...
+            ul.dropdown-menu.btn-question
+              li
+                = link_to t(".btn_create"),new_admin_exam_question_answer_path(exam_id: @exam.id, question_id: question.id), remote: true
+              li
+                = link_to t(".btn_edit"), edit_admin_exam_question_path(exam_id: @exam.id, id: question.id), remote: true
+              li
+                = link_to t(".btn_delete"), admin_exam_question_path(exam_id: @exam.id, id: question.id), method: :delete, data: {confirm: t(".confirm")}

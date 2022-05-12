@@ -1,0 +1,28 @@
+- provide :title, t(".title")
+.col-lg-9
+  h1.center= t".h1_html"
+  table.table.border-bodered.table-manager
+    = link_to new_admin_exam_url, class: "btn btn-primary" do
+      i.fa.fa-plus-square
+        = t(".btn_new")
+    thead
+      tr
+        th scope="col"
+          = t".picture"
+        th scope="col"
+          = t".name"
+        th scope="col"
+          = t".score"
+        th scope="col"
+          = t".time"
+        th scope="col"
+          = t".func"
+    tbody
+      - if @exams.length > 0
+          = render "search"
+          = render @exams
+      - else
+          = render "search"
+          p.error_search = t"users.exams.index.search"
+  .center
+    = will_paginate @exams

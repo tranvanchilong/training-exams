@@ -1,23 +1,184 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  exam_online: Exam Online
+  exam_welcom: "Welcome to Exam Online"
+  controller:
+    user:
+      flash_success: "Welcome to the Exam onlie"
+    admin:
+      create_exam_success: "Create Exam Success"
+      update_exam_success: "Update Exam Success"
+      update_exam_fail: "Update Exam Fail"
+      load_exam_fail: "Exam not found"
+      create_question_success: "Create Questions Success"
+      create_question_fail: "Create Question Fail"
+      load_question_fail: "Question not found"
+      update_question_success: "Update Questions Success"
+      update_question_fail: "Update Question Fail"
+      delete_question_success: "Delete Question Success"
+      delete_question_fail: "Delete Question Fail"
+      create_answer_success: "Create Answer Success"
+      create_answer_fail: "Create Answer Fail"
+      update_answer_success: "Update Answer Success"
+      update_answer_fail: "Update Answer Fail"
+      delete_answer_success: "Delete Answer Success"
+      delete_answer_fail: "Delete Answer Fail"
+      load_answer_fail: "Answer not found"
+      load_resources_fail: "Exam and Question not found. Please check data"
+      load_history_exam_fail: "History Exam not found"
+  layouts:
+    footer:
+      english: English
+      vietnamese: Việt Nam
+    header:
+      home: Home
+      exams: Exams
+      login: Log in
+      Users: "Users"
+      Account: "Account"
+      Profile: "Profile"
+      Settings: "Settings"
+      Logout: "Logout"
+  static_pages:
+    sidebar:
+      admin_func1: "Manage tests"
+      admin_func2: "User Management"
+      admin_func3: "Statistics of test results"
+      admin_func4: "Manage test requests"
+      user_func1: "Show All Tests"
+      user_func2: "History of tests"
+      admin_title: "Manage Exam Online System"
+      user_title: "Individual Exam Management"
+    home:
+      title: Home
+      header: Welcom to Exam Online
+      content: Expand on your experience of coding with FREE Top-Quality Exams
+      signup: Sign up
+  users:
+    new:
+      title: "Sign Up"
+      h1_html: "Sign up"
+      para_html: "This will be a signup page for new users."
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      confirmation: "Confirmation"
+      btn_submit: "Create my account"
+    exams:
+      index:
+        name: "Test name"
+        score: "Pass Score"
+        time: "Exam Time"
+        func: "Function"
+        btn_new: "New"
+        h1_html: "All Exams"
+        title: "Exams"
+        btn_begin: "Do Exam"
+        search: "Error : No data"
+      show:
+        login_name: "Please Login: "
+        login_click: "Click on here"
+    history_do_exams:
+      show:
+        title: "History Exam"
+        h1_html: "History Exam"
+        name: "Test name"
+        name_user: "UserName"
+        total_score: "Total Score"
+        submit_time: "Submit Time"
+        score: "Pass Score"
+        time: "Exam Time"
+        is_correct_answer: "Number Of Correct Sentences"
+        time_finish: "Time Finish"
+  shared:
+    error:
+      title: "The form contains"
+      error: "error"
+  sessions:
+    title: "Log in"
+    h1: "Log in"
+    password: "Password"
+    login: "Login"
+    new_user: "New User?"
+    signup: "Sign Up"
+    remember: "Remember me"
+    email: "Email address"
+    password: "Password"
+    or: "OR"
+    facebook: "Sign in with Facebook"
+    google: "Sign in with Google"
+  flash:
+    invalid: "Invalid email/password combination"
+  password:
+    forgot: "Forgot your password?"
+    submit-email: "Confirm Email"
+    title: "Forgot Password"
+    enter: "Enter your Email"
+  admin:
+    exams:
+      index:
+        picture: "Picture"
+        name: "Test name"
+        score: "Pass Score"
+        time: "Exam Time"
+        func: "Function"
+        btn_new: "New"
+        h1_html: "All Exams"
+        title: "Exams"
+      exam:
+        btn_edit: "Edit"
+        btn_detail: "Detail"
+        btn_delete: "Delete"
+        confirm_delete: "Are you sure ?"
+      new:
+        title: "Create Exam"
+        btn_new: "Create Exam"
+        h1_html: "Create Exam"
+      edit:
+        title: "Update Exam"
+        btn_new: "Save Exam"
+        h1_html: "Update Exam"
+      form:
+        picture: "Picture"
+        name: "Name Exam"
+        time_limit: "Time Limit (minutes)"
+        pass_score: "Pass Score"
+      show:
+        created_at: " Created At:"
+        time_limit: "Time Limit (minutes):"
+        pass_score: "Pass Score:"
+        btn_create_questions: "Create Questions"
+      exam_question:
+        btn_edit: "Edit"
+        btn_delete: "Delete"
+        btn_create: "Create Answer"
+        confirm: "Are you sure ?"
+    questions:
+      form_create_question:
+        label_ques: "Question ?"
+        placeholder: "please create question..."
+        btn_submit: "Create Question"
+      form_edit_question:
+        label_ques: " Update Question "
+        placeholder: "please update question"
+        btn_submit: "Update Question"
+    answers:
+      form_create_answer:
+        label_ans: "Answer :"
+        placeholder: "please create answer..."
+        btn_submit: "Create Answer"
+      form_edit_answer:
+        label_ans: "Answer :"
+        placeholder: "please edit answer..."
+        btn_submit: "Update Answer"
+  user:
+    exams:
+      show:
+        btn_submit: "Submit"
+        login_name: "Please Login : "
+        login_click: "Click on here"
+      header_show:
+        created_at: " Created At:"
+        time_limit: "Time Limit (minutes):"
+        pass_score: "Pass Score:"
+      index:
+        btn_submit: "Start"
