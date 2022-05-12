@@ -181,3 +181,5 @@ vi:
         pass_score: "Điểm vượt qua:"
       index:
         btn_submit: "Bắt Đầu"
+  Delete_user: "Xóa"
+  Detail_user: "Chi Tiết"

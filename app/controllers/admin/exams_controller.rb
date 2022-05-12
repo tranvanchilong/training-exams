@@ -2,10 +2,10 @@ module Admin
   class ExamsController < ApplicationController
     before_action :load_exam, only: %i[edit update destroy show]
 
-    def index
-      @exams = Exam.search(params[:name]).order_by_name.paginate(page: params[:page],
-                                                                 per_page: Settings.paginate.manage)
-    end
+  def index
+    @exams = Exam.search_exam(params[:name]).order_by_name.paginate(page: params[:page],
+                                                                    per_page: Settings.paginate.manage)
+  end
 
     def new
       @exam = Exam.new

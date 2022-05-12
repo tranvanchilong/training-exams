@@ -184,3 +184,5 @@ en:
         pass_score: "Pass Score:"
       index:
         btn_submit: "Start"
+  Delete_user: "Delete"
+  Detail_user: "Detail"
