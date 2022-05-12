@@ -21,7 +21,7 @@ Rails.application.routes.draw do
         end
       end
     end
-    namespace :user do
+    namespace :client do
       resources :user_history_exams
       resources :exams do
         resources :result_exams

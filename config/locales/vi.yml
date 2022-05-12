@@ -169,7 +169,7 @@ vi:
         label_ans: "Câu Trả Lời :"
         placeholder: "Vui lòng nhập câ trả lời..."
         btn_submit: "Cập Nhật Câu Trả Lời"
-  user:
+  client:
     exams:
       show:
         btn_submit: "Nộp Bài"

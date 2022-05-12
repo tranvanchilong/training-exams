@@ -20,7 +20,7 @@
       - @user_exams.each do |user_exam|
         tr
           td
-            = link_to "#{user_exam.exam.name}", user_user_history_exam_path(id: user_exam.id, amount_test: user_exam.total_test)
+            = link_to "#{user_exam.exam.name}", client_user_history_exam_path(id: user_exam.id, amount_test: user_exam.total_test)
           td
             = user_exam.user.name
           td
