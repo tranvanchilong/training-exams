@@ -14,16 +14,20 @@
         th scope="col"
           = t("users.history_do_exams.show.is_correct_answer")
         th scope="col"
+          = t("users.history_do_exams.show.total_test")
+        th scope="col"
           = t("users.history_do_exams.show.submit_time")
       - @user_exams.each do |user_exam|
         tr
           td
-            = user_exam.exam.name
+            = link_to "#{user_exam.exam.name}", user_user_history_exam_path(id: user_exam.id, amount_test: user_exam.total_test)
           td
             = user_exam.user.name
           td
             = user_exam.completed_time
           td
             = user_exam.total_score
+          td
+            = user_exam.total_test
           td
             = user_exam.created_at

@@ -25,6 +25,7 @@ vi:
       load_answer_fail: "Không tìm thấy câu trả lời"
       load_resources_fail: "Bài kiểm tra và câu hỏi không được tìm thấy. Vui lòng kiểm tra lại"
       load_history_exam_fail: "Không tìm thấy lịch sử  làm bài kiểm tra"
+      load_user_exam_fail: "Không tìm thấy lịch sử làm bài"
   layouts:
     footer:
       english: "English"
@@ -87,6 +88,7 @@ vi:
         time: "Thời Gian Làm Bài"
         is_correct_answer: "Số Câu Đúng"
         time_finish: "Thời gian nộp bài"
+        total_test: "Số Lần Test"
   shared:
     error:
       title: "Biểu mẫu chứa"

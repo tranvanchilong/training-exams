@@ -1,4 +1,4 @@
-$( document ).ready( function ()
+$( document ).on( "turbolinks:load", function ()
 {
   document.querySelector( ".btn-finish-exam" ).onclick = function ()
   {
