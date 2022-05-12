@@ -353,6 +353,18 @@ input {
   }
 }
 
+.user-exam-show {
+  position: relative;
+  top: -200px;
+  width: 80%;
+  height: 25%;
+
+  .name-exam {
+    line-height: 50px;
+    font-size: 50px;
+  }
+}
+
 .gravatar_edit {
   margin-top: -50px;
   width: 200px;
