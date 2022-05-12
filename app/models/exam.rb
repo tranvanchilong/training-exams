@@ -7,23 +7,14 @@ class Exam < ApplicationRecord
 
   validates :name, presence: true,
                    length: { maximum: Settings.model.user.name_length_max }
-  validates :pass_score,  numericality: {only_integer: true,
-                                   greater_than_or_equal_to: 10,
-                                   less_than_or_equal_to: 100},
-                          presence: true
+  validates :pass_score, numericality: { only_integer: true,
+                                         greater_than_or_equal_to: 10,
+                                         less_than_or_equal_to: 100 }, presence: true
   validates :time_limit, presence: true
 
-  scope :order_by_name, ->{order :name}
+  scope :order_by_name, -> { order :name }
 
   def self.search(name)
-      where('name LIKE ?', "%#{name}%")
-  end
-
-  def add_question question
-    questions << question
-  end
-
-  def remove_question question
-    questions.delete question
+    where("name LIKE ?", "%#{name}%")
   end
 end

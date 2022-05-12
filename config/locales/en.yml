@@ -172,7 +172,7 @@ en:
         label_ans: "Answer :"
         placeholder: "please edit answer..."
         btn_submit: "Update Answer"
-  user:
+  client:
     exams:
       show:
         btn_submit: "Submit"

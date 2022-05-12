@@ -22,7 +22,7 @@ $( document ).on( "turbolinks:load", function ()
     console.log( $( this ).data().id );
     $.ajax( {
       type: 'POST',
-      url: "/user/exams/" + $( this ).data().id + "/history_do_exams",
+      url: "/client/exams/" + $( this ).data().id + "/history_do_exams",
       beforeSend: function ( xhr ) { xhr.setRequestHeader( 'X-CSRF-Token', $( 'meta[name="csrf-token"]' ).attr( 'content' ) ) },
       data: {
         id: $( this ).data().id,
