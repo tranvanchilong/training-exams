@@ -25,6 +25,7 @@ en:
       load_answer_fail: "Answer not found"
       load_resources_fail: "Exam and Question not found. Please check data"
       load_history_exam_fail: "History Exam not found"
+      load_user_exam_fail: "History User Exam not found"
   layouts:
     footer:
       english: English
@@ -89,6 +90,7 @@ en:
         time: "Exam Time"
         is_correct_answer: "Number Of Correct Sentences"
         time_finish: "Time Finish"
+        total_test: "Number Of Tests"
   shared:
     error:
       title: "The form contains"

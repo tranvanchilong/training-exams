@@ -17,7 +17,7 @@ class User::HistoryDoExamsController < ApplicationController
     if max_amount.present?
       max_amount += 1
     else
-      max_amount = 0
+      max_amount = 1
     end
     while counter < y
       id = x["#{counter}"]["id"].to_i
@@ -30,7 +30,7 @@ class User::HistoryDoExamsController < ApplicationController
       counter += 1
       history1 = HistoryDoExam.create(answer: answer, user_id: current_user.id, question_id: id, amount_test: max_amount)
     end
-    user_exam = UserExam.create(user_id: current_user.id, exam_id: @exam.id, total_score: is_true, completed_time: "#{minutes}:#{seconds}")
+    user_exam = UserExam.create(user_id: current_user.id, exam_id: @exam.id, total_score: is_true, completed_time: "#{minutes}:#{seconds}", total_test: max_amount)
     respond_to do |format|
       format.html { render user_exam_result_exam_path(id: @exam.id, is_true: is_true) }
       format.json{render json: {id: @exam.id, is_true: is_true, minutes: minutes, seconds: seconds,

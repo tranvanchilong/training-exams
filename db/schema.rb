@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2022_04_29_025435) do
     t.integer "pass_score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "image_exam"
   end
 
   create_table "history_do_exams", force: :cascade do |t|
