@@ -3,16 +3,16 @@
       h2.my-4
         = t(".admin_title")
       .list-group
-        = link_to t(".admin_func1"), admin_exams_path, class: "button list-group-item"
-        = link_to t(".admin_func2"), admin_users_path, class: "button list-group-item"
-        = link_to t(".admin_func3"), "#", class: "list-group-item"
-        = link_to t(".admin_func4"), "#", class: "list-group-item"
+        = link_to t(".admin_func1"), admin_exams_path, class: "list-group-item1", data_text:"#{t(".admin_func1")}"
+        = link_to t(".admin_func2"), admin_users_path, class: "list-group-item1", data_text:"#{t(".admin_func2")}"
+        = link_to t(".admin_func3"), "#", class: "list-group-item1", data_text:"#{t(".admin_func3")}"
+        = link_to t(".admin_func4"), "#", class: "list-group-item1", data_text:"#{t(".admin_func4")}"
   - else
       h2.my-4
         = t(".user_title")
       .list-group
-        = link_to t(".user_func1"), client_exams_path, class: "list-group-item"
+        = link_to t(".user_func1"), client_exams_path, class: "list-group-item1", data_text:"#{t(".user_func1")}"
         - if logged_in? && current_user.user?
-          = link_to t(".user_func2"), client_user_history_exams_path, class: "list-group-item"
+          = link_to t(".user_func2"), client_user_history_exams_path, class: "list-group-item1", data_text:"#{t(".user_func2")}"
         - else
-          = link_to t(".user_func2"), "#", class: "list-group-item"
+          = link_to t(".user_func2"), "#", class: "list-group-item1", data_text:"#{t(".user_func2")}"

@@ -5,7 +5,7 @@ module Client
     def new; end
 
     def index
-      @exams = Exam.search(params[:name]).order_by_name.paginate(page: params[:page],
+      @exams = Exam.search_exam(params[:name]).order_by_name.paginate(page: params[:page],
                                                                  per_page: Settings.paginate.manage)
     end
 

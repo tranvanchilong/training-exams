@@ -4,7 +4,7 @@
     h1.center Update your profile
     - if @user.image.blank?
       .gravatar_edit
-        = gravatar_for@user
+        img.img_profile src="https://allimages.sgp1.digitaloceanspaces.com/tipeduvn/2022/02/1643790749_699_50-Anh-Meo-Cute-Ngau-Hinh-Avatar-Meo-De-Thuong.jpg"
     - else
       .avatar_edit
         img.avatar-user alt="#{@user.name}" src="#{@user.image.image_url}"

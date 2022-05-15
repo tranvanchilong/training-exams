@@ -12,9 +12,14 @@ class Exam < ApplicationRecord
                                          less_than_or_equal_to: 100 }, presence: true
   validates :time_limit, presence: true
 
-  scope :order_by_name, -> { order :name }
+  scope :order_by_name, ->{order :name}
+  scope :search_exam, ->(name) { where('name LIKE ?', "%#{name}%") if name.present?}
 
-  def self.search(name)
-    where("name LIKE ?", "%#{name}%")
+  def add_question question
+    questions << question
+  end
+
+  def remove_question question
+    questions.delete question
   end
 end
