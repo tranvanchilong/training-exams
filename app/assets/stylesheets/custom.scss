@@ -310,17 +310,16 @@ input {
   }
 }
 
-.img-fluid {
-  position: absolute;
-  top: 52px;
-  left: 498px;
-  height: 600px;
-  width: 450px;
-  border: 1px solid $gray-medium-light;
-  border-radius: 6px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
+// .img-fluid {
+//   position: absolute;
+//   top: 52px;
+//   left: 454px;
+//   height: 426px;
+//   width: 433px;
+//   border: 1px solid $gray-medium-light;
+//   border-radius: 6px;
+//   filter: alpha(opacity=50);
+// }
 
 .panel-default {
   position: absolute;
@@ -1078,3 +1077,15 @@ td.td_exam{
 .col-lg-3 h2 {
     font-weight: bold;
 }
+// .from_login{
+//   display: flex;
+// }
+// .login_img{
+//   width: 100%;
+//   height: 100%;
+//   img{
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+// }
