@@ -1,8 +1,9 @@
 = render partial: "header_show"
+- if logged_in?
+  .timer
 .center.col-lg-12.exam-question
   .hidden.value-time= @exam.time_limit
   - if logged_in?
-    .timer
     .view-question
       ul.question-ul
         - @questions.each do |question|
