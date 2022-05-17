@@ -125,7 +125,8 @@ footer {
   top: -26px;
   margin-top: 52px;
   height: 370px;
-  width: 100%;
+  width: 95%;
+  margin-left: 5%;
 }
 
 .image-footer {
@@ -312,13 +313,10 @@ input {
 
 .img-fluid {
   position: absolute;
-  top: 52px;
-  left: 498px;
-  height: 600px;
-  width: 450px;
-  border: 1px solid $gray-medium-light;
-  border-radius: 6px;
-  opacity: 0.5;
+  top: 26px;
+  left: 454px;
+  height: 426px;
+  width: 433px;
   filter: alpha(opacity=50);
 }
 
@@ -638,8 +636,9 @@ input.button--search:hover {
   position: relative;
   height: 100%;
   background-color: #90e0ef;
-  border-radius: 30px;
+  border-radius: 15px;
   margin-bottom: 30px;
+  margin-top: 26px;
   h1 {
     font-size: 50px;
     right: 20%;
@@ -723,9 +722,9 @@ li.answer-user-li {
   background-image: linear-gradient(to right bottom, rgba(71, 233, 22, 0.7), rgba(48, 185, 219, 0.3));
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 18px;
   padding: 30px;
-  margin-top: 30px;
+  margin-top: 27px;
   height: 450px;
   margin-bottom: 30px;
 }
@@ -846,7 +845,6 @@ h1.header__left-name {
   flex-grow: 1;
   float: right;
   width: 170px;
-  margin-left: 20px;
   h3 {
     color: #2e1313;
     font-size: 1.7rem;
@@ -1036,45 +1034,140 @@ tr td{
 td.td_exam{
   margin: auto;
 }
-.list-group{
-  background-color: rgb(7, 7, 6);
+.col-lg-3 {
+  box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+  background-image: linear-gradient(90deg, #e4a154 0%, #e6c04f 100%);
+  gap: 20px 0;
+  box-sizing: border-box;
+  margin-top: 26px;
   border-radius: 5px;
-  color: white;
-  // height: 250px;
-  a.list-group-item1{
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    // letter-spacing: 2px;
-    // text-transform: uppercase;
+  a{
     color: white;
-    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+    font-weight: bold;
+    text-decoration: none;
   }
-  a.list-group-item1::before{
-    content: attr(data_text);
-    position: absolute;
-    color: red;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    // border-right: 8px solid white;
-  }
-  a.list-group-item1:hover::before{
-    width: 100%;
-    height: 100%;
-    transition: all 2s ease-in-out;
-    -webkit-text-stroke: 1px red;
-  }
-}
-
-.list-group-item1 {
+  .list-group-item1{
     position: relative;
     display: block;
-    padding: 10px 15px;
-    margin-bottom: -1px;
-    border: 1px solid #ddd;
+    padding: 10px 10px;
+    transition: all 0.2s linear;
+    a{
+      display: block;
+      width: 200px;
+      color: #fff;
+      padding: 10px;
+    }
+  }
+}
+.list-group-item1:hover{
+  // background-color: rgb(248, 248, 248);
+  padding: 10px 18px;
+  text-decoration: none;
+  color: #000;
 }
 
 .col-lg-3 h2 {
     font-weight: bold;
+    color: #000;
+}
+img.img-fluid {
+    object-fit: cover;
+    object-position: -48px 0;
+}
+.btn-primary{
+  font-size: 12px;
+  margin-left: 20px;
+}
+.btn-danger{
+  font-size: 12px;
+  margin-left: 20px;
+}
+input.btn.btn-lg.btn-success {
+    margin-bottom: 10px;
+}
+
+.new_user{
+  input{
+    border-radius: 5px;
+  }
+}
+input.btn.btn-primary {
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 4px;
+}
+.carousel-control.left{
+  background-image: none;
+}
+.carousel-control.right{
+  background-image: none;
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+  width: 100%;
+}
+.panel{
+  border: none;
+  border-radius: 0;
+  background-color:#e4cefe ;
+  margin-top: -26px;
+}
+.panel-heading {
+  border-radius: 0;
+  border: none;
+  h2{
+  color: black;
+  font-weight: bold;
+  }
+}
+.panel-default > .panel-heading{
+  background-color:#e4cefe ;
+}
+.new_answer{
+  .form-group{
+    background-color: white;
+  }
+}
+// .edit_exam{
+//     position: absolute;
+//     top: 53px;
+//     width: 100%;
+//     background-color: #3f698d;
+//     .lable{
+//       text-align: center;
+//     }
+// }
+.center.jumbotron.home {
+    margin-top: 25px;
+}
+.details_profile{
+  margin-left: 30%;
+}
+.edit_examqsetion{
+  margin-left: 28%;
+  margin-top: 26px;
+  width: 40%;
+  height: 450px;
+  background-color: #4df1cf;
+  border-radius: 15px 0 0 15px;
+}
+.edit_exam {
+  fieldset{
+    width: 80%;
+    margin-left: 50px;
+  }
+}
+.new_exam {
+  fieldset{
+    width: 80%;
+    margin-left: 50px;
+  }
+}
+.img_edit_exam{
+  .img-fluid{
+    margin-left: 31.7%;
+    margin-top: 60px;
+    object-position: 0;
+    height: 450px;
+    border-radius: 0px 15px 15px 0px;
+  }
 }
